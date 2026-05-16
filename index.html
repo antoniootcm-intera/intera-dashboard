@@ -315,12 +315,7 @@
   </nav>
   <div class="sidebar-footer">
     <div><strong>Coleta atual</strong></div>
-    <div class="muted">15/05/2026, 22:31</div>
-    <button id="btn-refresh-collect" onclick="triggerCollect()" style="margin-top:10px;width:100%;padding:8px 10px;background:#0f172a;color:#fff;border:1px solid #1e293b;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:6px">
-      <span id="btn-refresh-icon">🔄</span>
-      <span id="btn-refresh-label">Atualizar coleta</span>
-    </button>
-    <div id="btn-refresh-hint" class="muted" style="font-size:10px;margin-top:6px;line-height:1.4"></div>
+    <div class="muted">15/05/2026, 22:53</div>
   </div>
 </aside>
 
@@ -333,10 +328,10 @@
     <div class="section-header"><div><span class="meta-label">Coleta anterior:</span> 15/05/2026, 14:16</div></div>
     <div class="stats">
       <div class="stat stat-total"><div class="stat-value">81</div><div class="stat-label">Empresas</div></div>
-      <div class="stat stat-total"><div class="stat-value">16.403</div><div class="stat-label">Total Vagas</div></div>
+      <div class="stat stat-total"><div class="stat-value">17.121</div><div class="stat-label">Total Vagas</div></div>
       <div class="stat stat-alert"><div class="stat-value">1</div><div class="stat-label">Alertas 🔥</div></div>
-      <div class="stat stat-ok"><div class="stat-value">79</div><div class="stat-label">Normais</div></div>
-      <div class="stat stat-err"><div class="stat-value">1</div><div class="stat-label">Erros</div></div>
+      <div class="stat stat-ok"><div class="stat-value">80</div><div class="stat-label">Normais</div></div>
+      <div class="stat stat-err"><div class="stat-value">0</div><div class="stat-label">Erros</div></div>
     </div>
     <div class="areas-section" id="areas-section-main" data-orig-title="16.267 vagas classificadas"><h2>📊 Distribuição por Área — <span id="areas-title-main">16.267 vagas classificadas</span></h2><div class="areas-grid"><div class="area-summary-card" style="border-left:4px solid #fb7185" onclick="filterArea('main','Varejo',this)" title="Filtrar por Varejo">
         <span class="area-summary-name">Varejo</span>
@@ -461,7 +456,7 @@
     <div class="controls">
       <button class="btn active" onclick="filterRows('main','all', this)">Todas (81)</button>
       <button class="btn" onclick="filterRows('main','alert', this)">🔥 Alertas (1)</button>
-      <button class="btn" onclick="filterRows('main','error', this)">Erros (1)</button>
+      <button class="btn" onclick="filterRows('main','error', this)">Erros (0)</button>
       <div class="search">
         <input type="text" id="search-main" placeholder="Buscar empresa..." oninput="searchRows('main', this.value)">
       </div>
@@ -565,7 +560,19 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-2</span> <span class="neg td-pct">-0.3%</span></td><td class="td-num td-hist"><span class="pos">+22</span> <span class="pos td-pct">+2.9%</span></td><td class="td-num td-hist"><span class="neg">-76</span> <span class="neg td-pct">-8.9%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Comercial,Varejo,Outros,Tecnologia,Consultoria,Marketing & Design,Gestão,Operações,Educação,Administrativo,Engenharia,Financeiro,RH & Pessoas,Serviços Gerais">
+    <tr class="" data-alert="0" data-areas="">
+      <td class="td-empresa">
+        <a href="https://jobs.sap.com/search/?createNewAlert=false&q=&locationsearch=brasil&optionsFacetsDD_department=&optionsFacetsDD_customfield3=&optionsFacetsDD_country=" target="_blank" rel="noopener">SAP</a>
+        <span class="ats-badge ats-generic">generic</span>
+        
+        
+      </td>
+      <td class="td-num">718</td>
+      <td class="td-num td-hoje">718</td>
+      <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+706</span> <span class="pos td-pct">+5883.3%</span></td><td class="td-num td-hist"><span class="pos">+706</span> <span class="pos td-pct">+5883.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
+      <td class="td-status"><span class="badge badge-ok">OK</span></td>
+    </tr>
+    <tr class="even" data-alert="0" data-areas="Comercial,Varejo,Outros,Tecnologia,Consultoria,Marketing & Design,Gestão,Operações,Educação,Administrativo,Engenharia,Financeiro,RH & Pessoas,Serviços Gerais">
       <td class="td-empresa">
         <a href="https://riachuelo.gupy.io/" target="_blank" rel="noopener">Riachuelo</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -577,7 +584,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-13</span> <span class="neg td-pct">-2.4%</span></td><td class="td-num td-hist"><span class="pos">+14</span> <span class="pos td-pct">+2.7%</span></td><td class="td-num td-hist"><span class="pos">+17</span> <span class="pos td-pct">+3.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Financeiro,Gestão,Tecnologia,Operações,Serviços Gerais,Engenharia,Marketing & Design,Outros,Varejo,Jurídico,Consultoria,Saúde,Administrativo,RH & Pessoas,Comercial">
+    <tr class="" data-alert="0" data-areas="Financeiro,Gestão,Tecnologia,Operações,Serviços Gerais,Engenharia,Marketing & Design,Outros,Varejo,Jurídico,Consultoria,Saúde,Administrativo,RH & Pessoas,Comercial">
       <td class="td-empresa">
         <a href="https://genteraizen.gupy.io/" target="_blank" rel="noopener">Raízen</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -589,7 +596,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-2</span> <span class="neg td-pct">-0.5%</span></td><td class="td-num td-hist"><span class="pos">+15</span> <span class="pos td-pct">+4.1%</span></td><td class="td-num td-hist"><span class="pos">+45</span> <span class="pos td-pct">+13.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Comercial,Financeiro,Administrativo,Engenharia,Tecnologia,Operações,Consultoria,Customer Success,Serviços Gerais,RH & Pessoas,Outros,Gestão,Marketing & Design,Varejo">
+    <tr class="even" data-alert="0" data-areas="Comercial,Financeiro,Administrativo,Engenharia,Tecnologia,Operações,Consultoria,Customer Success,Serviços Gerais,RH & Pessoas,Outros,Gestão,Marketing & Design,Varejo">
       <td class="td-empresa">
         <a href="https://ambev.gupy.io/" target="_blank" rel="noopener">Ambev</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -601,7 +608,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+31</span> <span class="pos td-pct">+9.1%</span></td><td class="td-num td-hist"><span class="pos">+59</span> <span class="pos td-pct">+18.9%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Financeiro,Comercial,Operações,RH & Pessoas,Engenharia,Gestão,Serviços Gerais,Tecnologia,Outros,Consultoria,Customer Success,Administrativo,Jurídico,Saúde,Marketing & Design">
+    <tr class="" data-alert="0" data-areas="Financeiro,Comercial,Operações,RH & Pessoas,Engenharia,Gestão,Serviços Gerais,Tecnologia,Outros,Consultoria,Customer Success,Administrativo,Jurídico,Saúde,Marketing & Design">
       <td class="td-empresa">
         <a href="https://grupojbs.gupy.io/" target="_blank" rel="noopener">JBS</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -613,7 +620,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-7</span> <span class="neg td-pct">-2.1%</span></td><td class="td-num td-hist"><span class="pos">+27</span> <span class="pos td-pct">+8.9%</span></td><td class="td-num td-hist"><span class="pos">+53</span> <span class="pos td-pct">+19.1%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Operações,RH & Pessoas,Outros,Comercial,Gestão,Varejo,Financeiro,Serviços Gerais,Administrativo,Consultoria,Engenharia">
+    <tr class="even" data-alert="0" data-areas="Operações,RH & Pessoas,Outros,Comercial,Gestão,Varejo,Financeiro,Serviços Gerais,Administrativo,Consultoria,Engenharia">
       <td class="td-empresa">
         <a href="https://cencosudbrasil.gupy.io/" target="_blank" rel="noopener">Cencosud Brasil</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -625,7 +632,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-8</span> <span class="neg td-pct">-2.4%</span></td><td class="td-num td-hist"><span class="pos">+9</span> <span class="pos td-pct">+2.8%</span></td><td class="td-num td-hist"><span class="pos">+10</span> <span class="pos td-pct">+3.2%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Administrativo,Varejo,Outros,Operações,Serviços Gerais,Gestão,Saúde,Marketing & Design,Consultoria,Engenharia,RH & Pessoas,Comercial">
+    <tr class="" data-alert="0" data-areas="Administrativo,Varejo,Outros,Operações,Serviços Gerais,Gestão,Saúde,Marketing & Design,Consultoria,Engenharia,RH & Pessoas,Comercial">
       <td class="td-empresa">
         <a href="https://petz.gupy.io/" target="_blank" rel="noopener">Petz</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -637,7 +644,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-9</span> <span class="neg td-pct">-2.8%</span></td><td class="td-num td-hist"><span class="pos">+19</span> <span class="pos td-pct">+6.4%</span></td><td class="td-num td-hist"><span class="pos">+23</span> <span class="pos td-pct">+7.8%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Varejo,Comercial,Outros">
+    <tr class="even" data-alert="0" data-areas="Varejo,Comercial,Outros">
       <td class="td-empresa">
         <a href="https://centaurotalentos.gupy.io/" target="_blank" rel="noopener">Centauro</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -649,7 +656,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="neg">-19</span> <span class="neg td-pct">-6.6%</span></td><td class="td-num td-hist"><span class="neg">-37</span> <span class="neg td-pct">-12.2%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Marketing & Design,Consultoria,Outros,Comercial,Administrativo,Engenharia,Tecnologia,Gestão,RH & Pessoas,Financeiro,Customer Success,Operações,Jurídico">
+    <tr class="" data-alert="0" data-areas="Marketing & Design,Consultoria,Outros,Comercial,Administrativo,Engenharia,Tecnologia,Gestão,RH & Pessoas,Financeiro,Customer Success,Operações,Jurídico">
       <td class="td-empresa">
         <a href="https://vagas-mrveco.gupy.io/" target="_blank" rel="noopener">MRV&CO</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -661,7 +668,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+10</span> <span class="pos td-pct">+3.9%</span></td><td class="td-num td-hist"><span class="pos">+14</span> <span class="pos td-pct">+5.6%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Comercial,Consultoria,Tecnologia,Financeiro,Outros,Gestão,Customer Success,Jurídico,Engenharia,RH & Pessoas,Serviços Gerais,Operações,Administrativo,Marketing & Design">
+    <tr class="even" data-alert="0" data-areas="Comercial,Consultoria,Tecnologia,Financeiro,Outros,Gestão,Customer Success,Jurídico,Engenharia,RH & Pessoas,Serviços Gerais,Operações,Administrativo,Marketing & Design">
       <td class="td-empresa">
         <a href="https://stefanini.gupy.io/" target="_blank" rel="noopener">Stefanini</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -673,7 +680,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-0.4%</span></td><td class="td-num td-hist"><span class="pos">+2</span> <span class="pos td-pct">+0.8%</span></td><td class="td-num td-hist"><span class="pos">+20</span> <span class="pos td-pct">+8.9%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Varejo,Operações,RH & Pessoas,Financeiro,Gestão,Serviços Gerais,Consultoria,Tecnologia,Outros,Marketing & Design,Administrativo,Comercial">
+    <tr class="" data-alert="0" data-areas="Varejo,Operações,RH & Pessoas,Financeiro,Gestão,Serviços Gerais,Consultoria,Tecnologia,Outros,Marketing & Design,Administrativo,Comercial">
       <td class="td-empresa">
         <a href="https://gruporihappy.gupy.io/" target="_blank" rel="noopener">Grupo Ri Happy</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -685,7 +692,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-2</span> <span class="neg td-pct">-0.9%</span></td><td class="td-num td-hist"><span class="pos">+29</span> <span class="pos td-pct">+15.4%</span></td><td class="td-num td-hist"><span class="pos">+30</span> <span class="pos td-pct">+16.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Saúde,Tecnologia,Comercial,Engenharia,Marketing & Design,Consultoria,Operações,Serviços Gerais,Outros,Financeiro,Jurídico,Gestão,Administrativo,RH & Pessoas">
+    <tr class="even" data-alert="0" data-areas="Saúde,Tecnologia,Comercial,Engenharia,Marketing & Design,Consultoria,Operações,Serviços Gerais,Outros,Financeiro,Jurídico,Gestão,Administrativo,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://porto.gupy.io/" target="_blank" rel="noopener">Porto</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -697,7 +704,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-6</span> <span class="neg td-pct">-2.8%</span></td><td class="td-num td-hist"><span class="pos">+20</span> <span class="pos td-pct">+10.5%</span></td><td class="td-num td-hist"><span class="pos">+55</span> <span class="pos td-pct">+35.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Comercial,Educação,Tecnologia,Saúde,Outros,Administrativo,RH & Pessoas,Engenharia,Jurídico,Marketing & Design,Consultoria,Serviços Gerais,Financeiro,Customer Success,Gestão">
+    <tr class="" data-alert="0" data-areas="Comercial,Educação,Tecnologia,Saúde,Outros,Administrativo,RH & Pessoas,Engenharia,Jurídico,Marketing & Design,Consultoria,Serviços Gerais,Financeiro,Customer Success,Gestão">
       <td class="td-empresa">
         <a href="https://cogna.gupy.io/" target="_blank" rel="noopener">Cogna</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -709,7 +716,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-4</span> <span class="neg td-pct">-1.9%</span></td><td class="td-num td-hist"><span class="pos">+5</span> <span class="pos td-pct">+2.4%</span></td><td class="td-num td-hist"><span class="neg">-17</span> <span class="neg td-pct">-7.5%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Marketing & Design,Comercial,Tecnologia,Varejo,Operações,Consultoria,Gestão,Financeiro,RH & Pessoas,Engenharia,Outros">
+    <tr class="even" data-alert="0" data-areas="Marketing & Design,Comercial,Tecnologia,Varejo,Operações,Consultoria,Gestão,Financeiro,RH & Pessoas,Engenharia,Outros">
       <td class="td-empresa">
         <a href="https://grupoboticario.gupy.io/" target="_blank" rel="noopener">Grupo Boticário</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -721,7 +728,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-0.5%</span></td><td class="td-num td-hist"><span class="pos">+40</span> <span class="pos td-pct">+25.2%</span></td><td class="td-num td-hist"><span class="pos">+7</span> <span class="pos td-pct">+3.6%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Administrativo,Consultoria,Operações,Financeiro,Engenharia,Outros,RH & Pessoas,Customer Success,Educação,Gestão,Tecnologia,Serviços Gerais,Comercial,Marketing & Design">
+    <tr class="" data-alert="0" data-areas="Administrativo,Consultoria,Operações,Financeiro,Engenharia,Outros,RH & Pessoas,Customer Success,Educação,Gestão,Tecnologia,Serviços Gerais,Comercial,Marketing & Design">
       <td class="td-empresa">
         <a href="https://randoncorp.gupy.io/" target="_blank" rel="noopener">Randoncorp</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -733,7 +740,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-0.5%</span></td><td class="td-num td-hist"><span class="pos">+32</span> <span class="pos td-pct">+20.5%</span></td><td class="td-num td-hist"><span class="pos">+56</span> <span class="pos td-pct">+42.4%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Comercial,Gestão,Tecnologia,Jurídico,Outros,RH & Pessoas,Engenharia,Consultoria,Educação,Financeiro,Marketing & Design,Operações,Customer Success,Administrativo">
+    <tr class="even" data-alert="0" data-areas="Comercial,Gestão,Tecnologia,Jurídico,Outros,RH & Pessoas,Engenharia,Consultoria,Educação,Financeiro,Marketing & Design,Operações,Customer Success,Administrativo">
       <td class="td-empresa">
         <a href="https://vemproitau.gupy.io/" target="_blank" rel="noopener">Itaú Unibanco</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -745,7 +752,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-9</span> <span class="neg td-pct">-4.7%</span></td><td class="td-num td-hist"><span class="neg">-5</span> <span class="neg td-pct">-2.6%</span></td><td class="td-num td-hist"><span class="neg">-10</span> <span class="neg td-pct">-5.2%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Saúde,Outros,Consultoria,Administrativo,Operações,Engenharia,Serviços Gerais,Jurídico,RH & Pessoas,Financeiro,Tecnologia">
+    <tr class="" data-alert="0" data-areas="Saúde,Outros,Consultoria,Administrativo,Operações,Engenharia,Serviços Gerais,Jurídico,RH & Pessoas,Financeiro,Tecnologia">
       <td class="td-empresa">
         <a href="https://irssl.gupy.io/" target="_blank" rel="noopener">Hospital Sírio-Libanês (IRSSL)</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -757,7 +764,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-0.6%</span></td><td class="td-num td-hist"><span class="pos">+6</span> <span class="pos td-pct">+3.4%</span></td><td class="td-num td-hist"><span class="pos">+22</span> <span class="pos td-pct">+13.9%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Outros,Administrativo,Financeiro,Consultoria,Operações,Comercial,RH & Pessoas,Engenharia,Tecnologia,Gestão,Marketing & Design">
+    <tr class="even" data-alert="0" data-areas="Outros,Administrativo,Financeiro,Consultoria,Operações,Comercial,RH & Pessoas,Engenharia,Tecnologia,Gestão,Marketing & Design">
       <td class="td-empresa">
         <a href="https://job-boards.greenhouse.io/agibank" target="_blank" rel="noopener">Agibank</a>
         <span class="ats-badge ats-greenhouse">greenhouse</span>
@@ -769,7 +776,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+7</span> <span class="pos td-pct">+4.2%</span></td><td class="td-num td-hist"><span class="pos">+12</span> <span class="pos td-pct">+7.5%</span></td><td class="td-num td-hist"><span class="pos">+21</span> <span class="pos td-pct">+13.8%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Consultoria,Operações,Comercial,Engenharia,Serviços Gerais,Tecnologia,Outros,Administrativo,Financeiro,Gestão,RH & Pessoas">
+    <tr class="" data-alert="0" data-areas="Consultoria,Operações,Comercial,Engenharia,Serviços Gerais,Tecnologia,Outros,Administrativo,Financeiro,Gestão,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://votorantimcimentos.gupy.io/" target="_blank" rel="noopener">Votorantim Cimentos</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -781,7 +788,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-7</span> <span class="neg td-pct">-4.1%</span></td><td class="td-num td-hist"><span class="pos">+9</span> <span class="pos td-pct">+5.9%</span></td><td class="td-num td-hist"><span class="pos">+8</span> <span class="pos td-pct">+5.2%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Outros,Financeiro,Comercial,Tecnologia,Consultoria,Operações,Engenharia,RH & Pessoas,Jurídico,Marketing & Design,Customer Success,Gestão">
+    <tr class="even" data-alert="0" data-areas="Outros,Financeiro,Comercial,Tecnologia,Consultoria,Operações,Engenharia,RH & Pessoas,Jurídico,Marketing & Design,Customer Success,Gestão">
       <td class="td-empresa">
         <a href="https://job-boards.greenhouse.io/xpinc" target="_blank" rel="noopener">XP Inc.</a>
         <span class="ats-badge ats-greenhouse">greenhouse</span>
@@ -793,7 +800,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-5</span> <span class="neg td-pct">-3.1%</span></td><td class="td-num td-hist"><span class="neg">-4</span> <span class="neg td-pct">-2.5%</span></td><td class="td-num td-hist"><span class="neg">-9</span> <span class="neg td-pct">-5.4%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Comercial,Varejo,Tecnologia,Operações,RH & Pessoas,Marketing & Design,Gestão,Outros">
+    <tr class="" data-alert="0" data-areas="Comercial,Varejo,Tecnologia,Operações,RH & Pessoas,Marketing & Design,Gestão,Outros">
       <td class="td-empresa">
         <a href="https://carreirasdecathlon.gupy.io/" target="_blank" rel="noopener">Decathlon</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -805,7 +812,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+8</span> <span class="pos td-pct">+5.4%</span></td><td class="td-num td-hist"><span class="pos">+10</span> <span class="pos td-pct">+6.9%</span></td><td class="td-num td-hist"><span class="pos">+19</span> <span class="pos td-pct">+14.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Administrativo,Comercial,Consultoria,Engenharia,Outros,Operações,Serviços Gerais,Financeiro,Saúde,Gestão,RH & Pessoas">
+    <tr class="even" data-alert="0" data-areas="Administrativo,Comercial,Consultoria,Engenharia,Outros,Operações,Serviços Gerais,Financeiro,Saúde,Gestão,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://grupoenergisa.gupy.io/" target="_blank" rel="noopener">Energisa</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -817,7 +824,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-9</span> <span class="neg td-pct">-5.6%</span></td><td class="td-num td-hist"><span class="pos">+7</span> <span class="pos td-pct">+4.8%</span></td><td class="td-num td-hist"><span class="neg">-1</span> <span class="neg td-pct">-0.6%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Outros,RH & Pessoas,Tecnologia,Financeiro,Marketing & Design,Gestão,Comercial,Customer Success,Operações,Varejo,Administrativo,Consultoria">
+    <tr class="" data-alert="0" data-areas="Outros,RH & Pessoas,Tecnologia,Financeiro,Marketing & Design,Gestão,Comercial,Customer Success,Operações,Varejo,Administrativo,Consultoria">
       <td class="td-empresa">
         <a href="https://job-boards.greenhouse.io/inter" target="_blank" rel="noopener">Banco Inter</a>
         <span class="ats-badge ats-greenhouse">greenhouse</span>
@@ -829,7 +836,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+1</span> <span class="pos td-pct">+0.7%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+6</span> <span class="pos td-pct">+4.1%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Outros,Operações,Tecnologia,Financeiro,Engenharia,Serviços Gerais,Consultoria,RH & Pessoas,Administrativo,Gestão,Saúde">
+    <tr class="even" data-alert="0" data-areas="Outros,Operações,Tecnologia,Financeiro,Engenharia,Serviços Gerais,Consultoria,RH & Pessoas,Administrativo,Gestão,Saúde">
       <td class="td-empresa">
         <a href="https://jsl.gupy.io/" target="_blank" rel="noopener">JSL</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -841,7 +848,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-10</span> <span class="neg td-pct">-6.8%</span></td><td class="td-num td-hist"><span class="pos">+4</span> <span class="pos td-pct">+3.0%</span></td><td class="td-num td-hist"><span class="pos">+8</span> <span class="pos td-pct">+6.2%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Operações,Outros,Engenharia,RH & Pessoas,Gestão,Administrativo,Comercial,Serviços Gerais,Consultoria">
+    <tr class="" data-alert="0" data-areas="Operações,Outros,Engenharia,RH & Pessoas,Gestão,Administrativo,Comercial,Serviços Gerais,Consultoria">
       <td class="td-empresa">
         <a href="https://cocacolafemsabr.gupy.io/" target="_blank" rel="noopener">Coca-Cola FEMSA Brasil</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -853,7 +860,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-6</span> <span class="neg td-pct">-4.2%</span></td><td class="td-num td-hist"><span class="neg">-10</span> <span class="neg td-pct">-6.8%</span></td><td class="td-num td-hist"><span class="neg">-14</span> <span class="neg td-pct">-9.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Gestão,Serviços Gerais,Consultoria,Operações,Outros,Engenharia,Tecnologia,Marketing & Design,Administrativo,Financeiro,Saúde,Comercial,RH & Pessoas">
+    <tr class="even" data-alert="0" data-areas="Gestão,Serviços Gerais,Consultoria,Operações,Outros,Engenharia,Tecnologia,Marketing & Design,Administrativo,Financeiro,Saúde,Comercial,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://stellantis.empregare.com/" target="_blank" rel="noopener">Stellantis</a>
         <span class="ats-badge ats-empregare">empregare</span>
@@ -865,7 +872,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+5</span> <span class="pos td-pct">+4.0%</span></td><td class="td-num td-hist"><span class="pos">+6</span> <span class="pos td-pct">+4.8%</span></td><td class="td-num td-hist"><span class="pos">+8</span> <span class="pos td-pct">+6.6%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Marketing & Design,Financeiro,Gestão,Tecnologia,Outros,Engenharia,RH & Pessoas,Comercial,Varejo,Consultoria,Operações,Administrativo,Serviços Gerais">
+    <tr class="" data-alert="0" data-areas="Marketing & Design,Financeiro,Gestão,Tecnologia,Outros,Engenharia,RH & Pessoas,Comercial,Varejo,Consultoria,Operações,Administrativo,Serviços Gerais">
       <td class="td-empresa">
         <a href="https://cea.gupy.io/" target="_blank" rel="noopener">C&A</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -877,7 +884,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-3</span> <span class="neg td-pct">-2.3%</span></td><td class="td-num td-hist"><span class="neg">-11</span> <span class="neg td-pct">-8.0%</span></td><td class="td-num td-hist"><span class="pos">+2</span> <span class="pos td-pct">+1.6%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Outros,Financeiro,Comercial,RH & Pessoas,Consultoria,Marketing & Design,Administrativo,Tecnologia,Jurídico,Operações,Engenharia,Gestão,Saúde">
+    <tr class="even" data-alert="0" data-areas="Outros,Financeiro,Comercial,RH & Pessoas,Consultoria,Marketing & Design,Administrativo,Tecnologia,Jurídico,Operações,Engenharia,Gestão,Saúde">
       <td class="td-empresa">
         <a href="https://boards.greenhouse.io/c6bank/" target="_blank" rel="noopener">C6 Bank</a>
         <span class="ats-badge ats-greenhouse">greenhouse</span>
@@ -889,7 +896,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+7</span> <span class="pos td-pct">+6.2%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Operações,Engenharia,Educação,Outros,Serviços Gerais,Financeiro,Saúde,Consultoria,RH & Pessoas,Gestão,Administrativo,Tecnologia">
+    <tr class="" data-alert="0" data-areas="Operações,Engenharia,Educação,Outros,Serviços Gerais,Financeiro,Saúde,Consultoria,RH & Pessoas,Gestão,Administrativo,Tecnologia">
       <td class="td-empresa">
         <a href="https://motiva.gupy.io/" target="_blank" rel="noopener">Motiva (Santander)</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -901,7 +908,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-9</span> <span class="neg td-pct">-7.1%</span></td><td class="td-num td-hist"><span class="pos">+7</span> <span class="pos td-pct">+6.3%</span></td><td class="td-num td-hist"><span class="pos">+11</span> <span class="pos td-pct">+10.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Outros,Tecnologia,Marketing & Design,Comercial,Consultoria,Financeiro,Gestão,RH & Pessoas">
+    <tr class="even" data-alert="0" data-areas="Outros,Tecnologia,Marketing & Design,Comercial,Consultoria,Financeiro,Gestão,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://job-boards.greenhouse.io/ifoodcarreiras" target="_blank" rel="noopener">iFood</a>
         <span class="ats-badge ats-greenhouse">greenhouse</span>
@@ -913,7 +920,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+4</span> <span class="pos td-pct">+3.8%</span></td><td class="td-num td-hist"><span class="pos">+17</span> <span class="pos td-pct">+18.3%</span></td><td class="td-num td-hist"><span class="pos">+28</span> <span class="pos td-pct">+34.1%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Outros,Operações,Consultoria,Financeiro,Tecnologia,Marketing & Design,Administrativo">
+    <tr class="" data-alert="0" data-areas="Outros,Operações,Consultoria,Financeiro,Tecnologia,Marketing & Design,Administrativo">
       <td class="td-empresa">
         <a href="https://job-boards.greenhouse.io/nubank" target="_blank" rel="noopener">Nubank</a>
         <span class="ats-badge ats-greenhouse">greenhouse</span>
@@ -925,7 +932,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="neg">-4</span> <span class="neg td-pct">-3.6%</span></td><td class="td-num td-hist"><span class="neg">-1</span> <span class="neg td-pct">-0.9%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Engenharia,Financeiro,Operações,Outros,Consultoria,RH & Pessoas,Tecnologia,Marketing & Design,Comercial,Gestão,Educação">
+    <tr class="even" data-alert="0" data-areas="Engenharia,Financeiro,Operações,Outros,Consultoria,RH & Pessoas,Tecnologia,Marketing & Design,Comercial,Gestão,Educação">
       <td class="td-empresa">
         <a href="https://golcarreiras.gupy.io/" target="_blank" rel="noopener">GOL Linhas Aéreas</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -937,7 +944,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-4</span> <span class="neg td-pct">-3.7%</span></td><td class="td-num td-hist"><span class="pos">+6</span> <span class="pos td-pct">+6.1%</span></td><td class="td-num td-hist"><span class="pos">+3</span> <span class="pos td-pct">+3.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Varejo,Operações,Comercial,RH & Pessoas,Engenharia,Marketing & Design">
+    <tr class="" data-alert="0" data-areas="Varejo,Operações,Comercial,RH & Pessoas,Engenharia,Marketing & Design">
       <td class="td-empresa">
         <a href="https://carreiras.leroymerlin.com.br/jobs" target="_blank" rel="noopener">Leroy Merlin</a>
         <span class="ats-badge ats-generic">generic</span>
@@ -949,7 +956,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Comercial,Outros,Engenharia,Consultoria,Gestão,Marketing & Design,Financeiro,Tecnologia,Administrativo,Operações,RH & Pessoas">
+    <tr class="even" data-alert="0" data-areas="Comercial,Outros,Engenharia,Consultoria,Gestão,Marketing & Design,Financeiro,Tecnologia,Administrativo,Operações,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://vivo.gupy.io/" target="_blank" rel="noopener">Vivo (Telefônica Brasil)</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -961,7 +968,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-11</span> <span class="neg td-pct">-10.5%</span></td><td class="td-num td-hist"><span class="pos">+2</span> <span class="pos td-pct">+2.2%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Comercial,RH & Pessoas,Financeiro,Marketing & Design,Outros,Consultoria,Tecnologia,Gestão">
+    <tr class="" data-alert="0" data-areas="Comercial,RH & Pessoas,Financeiro,Marketing & Design,Outros,Consultoria,Tecnologia,Gestão">
       <td class="td-empresa">
         <a href="https://semparar.gupy.io/" target="_blank" rel="noopener">Sem Parar</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -973,7 +980,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+1</span> <span class="pos td-pct">+1.1%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+1.1%</span></td><td class="td-num td-hist"><span class="neg">-20</span> <span class="neg td-pct">-18.2%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Tecnologia,Consultoria,Comercial,Outros,Engenharia,Marketing & Design,Operações,Gestão,RH & Pessoas,Customer Success,Financeiro,Jurídico,Administrativo">
+    <tr class="even" data-alert="0" data-areas="Tecnologia,Consultoria,Comercial,Outros,Engenharia,Marketing & Design,Operações,Gestão,RH & Pessoas,Customer Success,Financeiro,Jurídico,Administrativo">
       <td class="td-empresa">
         <a href="https://voeazul.gupy.io/" target="_blank" rel="noopener">Azul</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -985,7 +992,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-3</span> <span class="neg td-pct">-3.4%</span></td><td class="td-num td-hist"><span class="neg">-3</span> <span class="neg td-pct">-3.4%</span></td><td class="td-num td-hist"><span class="pos">+3</span> <span class="pos td-pct">+3.7%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Financeiro,Comercial,Tecnologia,Outros,Consultoria,Operações,Jurídico,RH & Pessoas,Gestão,Marketing & Design,Administrativo">
+    <tr class="" data-alert="0" data-areas="Financeiro,Comercial,Tecnologia,Outros,Consultoria,Operações,Jurídico,RH & Pessoas,Gestão,Marketing & Design,Administrativo">
       <td class="td-empresa">
         <a href="https://job-boards.greenhouse.io/quintoandar" target="_blank" rel="noopener">QuintoAndar</a>
         <span class="ats-badge ats-greenhouse">greenhouse</span>
@@ -997,7 +1004,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-2</span> <span class="neg td-pct">-2.6%</span></td><td class="td-num td-hist"><span class="neg">-4</span> <span class="neg td-pct">-5.1%</span></td><td class="td-num td-hist"><span class="neg">-4</span> <span class="neg td-pct">-5.1%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Gestão,Outros,Consultoria,Tecnologia,Operações,Financeiro,Marketing & Design,Administrativo,Comercial,RH & Pessoas">
+    <tr class="even" data-alert="0" data-areas="Gestão,Outros,Consultoria,Tecnologia,Operações,Financeiro,Marketing & Design,Administrativo,Comercial,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://hyperapharma.gupy.io/" target="_blank" rel="noopener">Hypera Pharma</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1009,7 +1016,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-1.4%</span></td><td class="td-num td-hist"><span class="neg">-12</span> <span class="neg td-pct">-14.6%</span></td><td class="td-num td-hist"><span class="neg">-7</span> <span class="neg td-pct">-9.1%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Operações,Financeiro,Tecnologia,Consultoria,Administrativo,Outros,Comercial,Gestão,Engenharia,Educação,Customer Success,RH & Pessoas,Saúde">
+    <tr class="" data-alert="0" data-areas="Operações,Financeiro,Tecnologia,Consultoria,Administrativo,Outros,Comercial,Gestão,Engenharia,Educação,Customer Success,RH & Pessoas,Saúde">
       <td class="td-empresa">
         <a href="https://yduqs.gupy.io/" target="_blank" rel="noopener">Yduqs</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1021,7 +1028,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-3</span> <span class="neg td-pct">-4.2%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+1.5%</span></td><td class="td-num td-hist"><span class="neg">-9</span> <span class="neg td-pct">-11.7%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Engenharia,Financeiro,Marketing & Design,Administrativo,Outros,Consultoria,Tecnologia,RH & Pessoas,Operações,Comercial,Customer Success">
+    <tr class="even" data-alert="0" data-areas="Engenharia,Financeiro,Marketing & Design,Administrativo,Outros,Consultoria,Tecnologia,RH & Pessoas,Operações,Comercial,Customer Success">
       <td class="td-empresa">
         <a href="https://cyrela.gupy.io/" target="_blank" rel="noopener">Cyrela</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1033,7 +1040,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+1</span> <span class="pos td-pct">+1.5%</span></td><td class="td-num td-hist"><span class="pos">+5</span> <span class="pos td-pct">+7.9%</span></td><td class="td-num td-hist"><span class="pos">+15</span> <span class="pos td-pct">+28.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Administrativo,Consultoria,Outros,Customer Success,Financeiro,Tecnologia,RH & Pessoas,Comercial,Operações,Serviços Gerais,Engenharia,Gestão,Jurídico">
+    <tr class="" data-alert="0" data-areas="Administrativo,Consultoria,Outros,Customer Success,Financeiro,Tecnologia,RH & Pessoas,Comercial,Operações,Serviços Gerais,Engenharia,Gestão,Jurídico">
       <td class="td-empresa">
         <a href="https://equatorialenergia.gupy.io/" target="_blank" rel="noopener">Grupo Equatorial</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1045,7 +1052,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-5</span> <span class="neg td-pct">-6.9%</span></td><td class="td-num td-hist"><span class="pos">+3</span> <span class="pos td-pct">+4.7%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+1.5%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Tecnologia,Comercial,Financeiro,Consultoria,Marketing & Design,Outros,Operações,RH & Pessoas,Gestão,Engenharia">
+    <tr class="even" data-alert="0" data-areas="Tecnologia,Comercial,Financeiro,Consultoria,Marketing & Design,Outros,Operações,RH & Pessoas,Gestão,Engenharia">
       <td class="td-empresa">
         <a href="https://job-boards.greenhouse.io/bancopan" target="_blank" rel="noopener">Banco Pan</a>
         <span class="ats-badge ats-greenhouse">greenhouse</span>
@@ -1057,7 +1064,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+6</span> <span class="pos td-pct">+10.9%</span></td><td class="td-num td-hist"><span class="pos">+11</span> <span class="pos td-pct">+22.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Administrativo,Gestão,Outros,Jurídico,Operações,Consultoria,Comercial,Tecnologia,Engenharia,Financeiro,RH & Pessoas,Serviços Gerais,Educação">
+    <tr class="" data-alert="0" data-areas="Administrativo,Gestão,Outros,Jurídico,Operações,Consultoria,Comercial,Tecnologia,Engenharia,Financeiro,RH & Pessoas,Serviços Gerais,Educação">
       <td class="td-empresa">
         <a href="https://rumolog.gupy.io/" target="_blank" rel="noopener">Rumo</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1069,7 +1076,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-9</span> <span class="neg td-pct">-13.0%</span></td><td class="td-num td-hist"><span class="neg">-3</span> <span class="neg td-pct">-4.8%</span></td><td class="td-num td-hist"><span class="neg">-11</span> <span class="neg td-pct">-15.5%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Consultoria,Operações,Engenharia,Comercial,Gestão,Outros,Educação,Financeiro,Serviços Gerais,Administrativo,RH & Pessoas,Tecnologia,Marketing & Design">
+    <tr class="even" data-alert="0" data-areas="Consultoria,Operações,Engenharia,Comercial,Gestão,Outros,Educação,Financeiro,Serviços Gerais,Administrativo,RH & Pessoas,Tecnologia,Marketing & Design">
       <td class="td-empresa">
         <a href="https://tigre.gupy.io/" target="_blank" rel="noopener">Grupo Tigre</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1081,7 +1088,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="neg">-5</span> <span class="neg td-pct">-7.9%</span></td><td class="td-num td-hist"><span class="pos">+3</span> <span class="pos td-pct">+5.5%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Tecnologia,RH & Pessoas,Outros,Jurídico,Operações,Consultoria,Financeiro,Comercial,Serviços Gerais,Saúde,Gestão,Engenharia">
+    <tr class="" data-alert="0" data-areas="Tecnologia,RH & Pessoas,Outros,Jurídico,Operações,Consultoria,Financeiro,Comercial,Serviços Gerais,Saúde,Gestão,Engenharia">
       <td class="td-empresa">
         <a href="https://vagasache.gupy.io/" target="_blank" rel="noopener">Aché Laboratórios</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1093,7 +1100,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-2</span> <span class="neg td-pct">-3.3%</span></td><td class="td-num td-hist"><span class="neg">-4</span> <span class="neg td-pct">-6.5%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Operações,Comercial,Gestão,Marketing & Design,Engenharia,Consultoria,Administrativo,Tecnologia,RH & Pessoas,Jurídico,Outros">
+    <tr class="even" data-alert="0" data-areas="Operações,Comercial,Gestão,Marketing & Design,Engenharia,Consultoria,Administrativo,Tecnologia,RH & Pessoas,Jurídico,Outros">
       <td class="td-empresa">
         <a href="https://vibraenergia.gupy.io/" target="_blank" rel="noopener">Vibra Energia</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1105,7 +1112,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="neg">-3</span> <span class="neg td-pct">-5.1%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+1.8%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Marketing & Design,Comercial,Consultoria,Gestão,Tecnologia,Outros,Financeiro,RH & Pessoas,Jurídico">
+    <tr class="" data-alert="0" data-areas="Marketing & Design,Comercial,Consultoria,Gestão,Tecnologia,Outros,Financeiro,RH & Pessoas,Jurídico">
       <td class="td-empresa">
         <a href="https://venhasersafra.gupy.io/" target="_blank" rel="noopener">Safra</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1117,7 +1124,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-1.8%</span></td><td class="td-num td-hist"><span class="pos">+2</span> <span class="pos td-pct">+3.8%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Consultoria,Outros,Financeiro,Engenharia,Gestão,Administrativo,Saúde,Comercial,Operações,Educação,Tecnologia">
+    <tr class="even" data-alert="0" data-areas="Consultoria,Outros,Financeiro,Engenharia,Gestão,Administrativo,Saúde,Comercial,Operações,Educação,Tecnologia">
       <td class="td-empresa">
         <a href="https://dasacorp.gupy.io/" target="_blank" rel="noopener">Dasa</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1129,7 +1136,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+3</span> <span class="pos td-pct">+6.1%</span></td><td class="td-num td-hist"><span class="pos">+8</span> <span class="pos td-pct">+18.2%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Comercial,Tecnologia,Marketing & Design,Gestão,Outros,Consultoria,RH & Pessoas,Engenharia,Financeiro,Varejo,Operações">
+    <tr class="" data-alert="0" data-areas="Comercial,Tecnologia,Marketing & Design,Gestão,Outros,Consultoria,RH & Pessoas,Engenharia,Financeiro,Varejo,Operações">
       <td class="td-empresa">
         <a href="https://vempraclaro.gupy.io/" target="_blank" rel="noopener">Claro</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1141,7 +1148,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-9</span> <span class="neg td-pct">-15.3%</span></td><td class="td-num td-hist"><span class="neg">-3</span> <span class="neg td-pct">-5.7%</span></td><td class="td-num td-hist"><span class="neg">-11</span> <span class="neg td-pct">-18.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Consultoria,Varejo,Gestão,Tecnologia,Outros,Comercial,Engenharia,RH & Pessoas">
+    <tr class="even" data-alert="0" data-areas="Consultoria,Varejo,Gestão,Tecnologia,Outros,Comercial,Engenharia,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://vemprotime.gupy.io/" target="_blank" rel="noopener">TIM Brasil</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1153,7 +1160,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-2</span> <span class="neg td-pct">-4.0%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+2.1%</span></td><td class="td-num td-hist"><span class="pos">+11</span> <span class="pos td-pct">+29.7%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Comercial,Operações,Educação,Outros,Engenharia,Financeiro,Serviços Gerais,Consultoria,RH & Pessoas">
+    <tr class="" data-alert="0" data-areas="Comercial,Operações,Educação,Outros,Engenharia,Financeiro,Serviços Gerais,Consultoria,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://suzano.gupy.io/" target="_blank" rel="noopener">Suzano</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1165,7 +1172,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+1</span> <span class="pos td-pct">+2.1%</span></td><td class="td-num td-hist"><span class="pos">+8</span> <span class="pos td-pct">+20.0%</span></td><td class="td-num td-hist"><span class="pos">+18</span> <span class="pos td-pct">+60.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Operações,Saúde,Administrativo,Marketing & Design,Tecnologia,Serviços Gerais,Outros,Engenharia,Jurídico,Financeiro,Gestão,RH & Pessoas,Comercial">
+    <tr class="even" data-alert="0" data-areas="Operações,Saúde,Administrativo,Marketing & Design,Tecnologia,Serviços Gerais,Outros,Engenharia,Jurídico,Financeiro,Gestão,RH & Pessoas,Comercial">
       <td class="td-empresa">
         <a href="https://eurofarma.gupy.io/" target="_blank" rel="noopener">Eurofarma</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1177,7 +1184,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+2.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Tecnologia,Comercial,Consultoria,RH & Pessoas,Operações,Gestão,Outros">
+    <tr class="" data-alert="0" data-areas="Tecnologia,Comercial,Consultoria,RH & Pessoas,Operações,Gestão,Outros">
       <td class="td-empresa">
         <a href="https://globo.gupy.io/" target="_blank" rel="noopener">Globo</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1189,7 +1196,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+1</span> <span class="pos td-pct">+2.3%</span></td><td class="td-num td-hist"><span class="pos">+5</span> <span class="pos td-pct">+12.8%</span></td><td class="td-num td-hist"><span class="pos">+10</span> <span class="pos td-pct">+29.4%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Varejo,Administrativo,Engenharia,Comercial,RH & Pessoas,Tecnologia,Jurídico,Marketing & Design,Financeiro">
+    <tr class="even" data-alert="0" data-areas="Varejo,Administrativo,Engenharia,Comercial,RH & Pessoas,Tecnologia,Jurídico,Marketing & Design,Financeiro">
       <td class="td-empresa">
         <a href="https://americanas.gupy.io/" target="_blank" rel="noopener">Americanas S.A.</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1201,7 +1208,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-2.2%</span></td><td class="td-num td-hist"><span class="neg">-1</span> <span class="neg td-pct">-2.2%</span></td><td class="td-num td-hist"><span class="pos">+3</span> <span class="pos td-pct">+7.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Operações,Consultoria,Gestão,Engenharia,RH & Pessoas,Jurídico,Tecnologia,Outros,Financeiro,Administrativo,Comercial">
+    <tr class="" data-alert="0" data-areas="Operações,Consultoria,Gestão,Engenharia,RH & Pessoas,Jurídico,Tecnologia,Outros,Financeiro,Administrativo,Comercial">
       <td class="td-empresa">
         <a href="https://eneva.compleo.com.br/" target="_blank" rel="noopener">Eneva</a>
         <span class="ats-badge ats-compleo">compleo</span>
@@ -1213,7 +1220,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+4</span> <span class="pos td-pct">+11.8%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+2</span> <span class="pos td-pct">+5.6%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Comercial,Operações,RH & Pessoas,Jurídico,Administrativo,Financeiro,Marketing & Design,Outros,Tecnologia,Gestão,Consultoria,Customer Success">
+    <tr class="even" data-alert="0" data-areas="Comercial,Operações,RH & Pessoas,Jurídico,Administrativo,Financeiro,Marketing & Design,Outros,Tecnologia,Gestão,Consultoria,Customer Success">
       <td class="td-empresa">
         <a href="https://ipiranga.gupy.io/" target="_blank" rel="noopener">Ipiranga</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1225,7 +1232,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-6</span> <span class="neg td-pct">-13.6%</span></td><td class="td-num td-hist"><span class="neg">-2</span> <span class="neg td-pct">-5.0%</span></td><td class="td-num td-hist"><span class="neg">-7</span> <span class="neg td-pct">-15.6%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Tecnologia,RH & Pessoas,Marketing & Design,Engenharia,Jurídico,Outros,Operações,Financeiro,Consultoria,Administrativo,Comercial,Gestão">
+    <tr class="" data-alert="0" data-areas="Tecnologia,RH & Pessoas,Marketing & Design,Engenharia,Jurídico,Outros,Operações,Financeiro,Consultoria,Administrativo,Comercial,Gestão">
       <td class="td-empresa">
         <a href="https://minervafoods.gupy.io/" target="_blank" rel="noopener">Minerva Foods</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1237,7 +1244,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-2.7%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+2.9%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Comercial,RH & Pessoas,Outros,Customer Success,Tecnologia,Administrativo">
+    <tr class="even" data-alert="0" data-areas="Comercial,RH & Pessoas,Outros,Customer Success,Tecnologia,Administrativo">
       <td class="td-empresa">
         <a href="https://job-boards.greenhouse.io/vtex" target="_blank" rel="noopener">VTEX</a>
         <span class="ats-badge ats-greenhouse">greenhouse</span>
@@ -1249,7 +1256,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+3</span> <span class="pos td-pct">+13.0%</span></td><td class="td-num td-hist"><span class="pos">+3</span> <span class="pos td-pct">+13.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Tecnologia,Outros,Consultoria,Marketing & Design,Comercial,Operações,Gestão,Financeiro,RH & Pessoas">
+    <tr class="" data-alert="0" data-areas="Tecnologia,Outros,Consultoria,Marketing & Design,Comercial,Operações,Gestão,Financeiro,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://tokiomarine.gupy.io/" target="_blank" rel="noopener">Tokio Marine Seguradora</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1261,7 +1268,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+1</span> <span class="pos td-pct">+4.2%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+4.2%</span></td><td class="td-num td-hist"><span class="neg">-3</span> <span class="neg td-pct">-10.7%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Tecnologia,Outros,Financeiro,Administrativo,Consultoria,Operações,Comercial,Engenharia,RH & Pessoas">
+    <tr class="even" data-alert="0" data-areas="Tecnologia,Outros,Financeiro,Administrativo,Consultoria,Operações,Comercial,Engenharia,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://vwbrasil.gupy.io/" target="_blank" rel="noopener">Volkswagen do Brasil</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1273,7 +1280,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+5</span> <span class="pos td-pct">+25.0%</span></td><td class="td-num td-hist"><span class="pos">+7</span> <span class="pos td-pct">+38.9%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="">
+    <tr class="" data-alert="0" data-areas="">
       <td class="td-empresa">
         <a href="https://jobs.enel.com/" target="_blank" rel="noopener">Enel (Global)</a>
         <span class="ats-badge ats-generic">generic</span>
@@ -1285,7 +1292,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="">
+    <tr class="even" data-alert="0" data-areas="">
       <td class="td-empresa">
         <a href="https://www.uber.com/br/pt-br/careers/list/?location=BRA-S%C3%A3o%20Paulo-Sao%20Paulo&location=BRA-Rio%20de%20Janeiro-Rio%20de%20Janeiro&location=BRA-Distrito%20Federal-Brasilia" target="_blank" rel="noopener">Uber</a>
         <span class="ats-badge ats-generic">generic</span>
@@ -1297,7 +1304,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="">
+    <tr class="" data-alert="0" data-areas="">
       <td class="td-empresa">
         <a href="https://atacadao.pandape.infojobs.com.br/" target="_blank" rel="noopener">Atacadão</a>
         <span class="ats-badge ats-pandape">pandape</span>
@@ -1309,7 +1316,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="">
+    <tr class="even" data-alert="0" data-areas="">
       <td class="td-empresa">
         <a href="https://sodexoonsiteoperacao.pandape.infojobs.com.br/" target="_blank" rel="noopener">Sodexo</a>
         <span class="ats-badge ats-pandape">pandape</span>
@@ -1321,7 +1328,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="">
+    <tr class="" data-alert="0" data-areas="">
       <td class="td-empresa">
         <a href="https://nestlebr.pandape.com.br/" target="_blank" rel="noopener">Nestlé Brasil</a>
         <span class="ats-badge ats-pandape">pandape</span>
@@ -1333,7 +1340,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="">
+    <tr class="even" data-alert="0" data-areas="">
       <td class="td-empresa">
         <a href="https://kavakcom.pandape.infojobs.com.br/" target="_blank" rel="noopener">Kavak.com</a>
         <span class="ats-badge ats-pandape">pandape</span>
@@ -1345,7 +1352,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Operações,Tecnologia,Gestão,Outros,RH & Pessoas,Serviços Gerais">
+    <tr class="" data-alert="0" data-areas="Operações,Tecnologia,Gestão,Outros,RH & Pessoas,Serviços Gerais">
       <td class="td-empresa">
         <a href="https://usiminas.gupy.io/" target="_blank" rel="noopener">Usiminas</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1357,7 +1364,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-6.2%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+7.1%</span></td><td class="td-num td-hist"><span class="pos">+8</span> <span class="pos td-pct">+114.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Financeiro,Marketing & Design,Outros,Consultoria,Saúde,Engenharia,Gestão,Tecnologia,RH & Pessoas">
+    <tr class="even" data-alert="0" data-areas="Financeiro,Marketing & Design,Outros,Consultoria,Saúde,Engenharia,Gestão,Tecnologia,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://unimed-brasil.gupy.io/" target="_blank" rel="noopener">Unimed</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1369,7 +1376,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+8.3%</span></td><td class="td-num td-hist"><span class="neg">-1</span> <span class="neg td-pct">-7.1%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Tecnologia">
+    <tr class="" data-alert="0" data-areas="Tecnologia">
       <td class="td-empresa">
         <a href="https://job-boards.greenhouse.io/zupinnovation" target="_blank" rel="noopener">Zup Innovation</a>
         <span class="ats-badge ats-greenhouse">greenhouse</span>
@@ -1381,7 +1388,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+1</span> <span class="pos td-pct">+14.3%</span></td><td class="td-num td-hist"><span class="pos">+2</span> <span class="pos td-pct">+33.3%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="">
+    <tr class="even" data-alert="0" data-areas="">
       <td class="td-empresa">
         <a href="https://jobs.experian.com/jobs" target="_blank" rel="noopener">Serasa Experian</a>
         <span class="ats-badge ats-generic">generic</span>
@@ -1393,7 +1400,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Marketing & Design,Financeiro,Varejo,Comercial">
+    <tr class="" data-alert="0" data-areas="Marketing & Design,Financeiro,Varejo,Comercial">
       <td class="td-empresa">
         <a href="https://arezzoeco.gupy.io/" target="_blank" rel="noopener">Azzas 2154 (Arezzo&Co)</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1405,7 +1412,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="neg">-1</span> <span class="neg td-pct">-20.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="">
+    <tr class="even" data-alert="0" data-areas="">
       <td class="td-empresa">
         <a href="https://kpmgbrasil1.gupy.io/" target="_blank" rel="noopener">KPMG Brasil</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1417,7 +1424,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="">
+    <tr class="" data-alert="0" data-areas="">
       <td class="td-empresa">
         <a href="https://careers.dhl.com/amer/pt/dhl-brasil" target="_blank" rel="noopener">DHL Brasil</a>
         <span class="ats-badge ats-generic">generic</span>
@@ -1429,7 +1436,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Financeiro">
+    <tr class="even" data-alert="0" data-areas="Financeiro">
       <td class="td-empresa">
         <a href="https://cosan.gupy.io/" target="_blank" rel="noopener">Cosan</a>
         <span class="ats-badge ats-gupy">gupy</span>
@@ -1440,18 +1447,6 @@
       <td class="td-num td-hoje">1</td>
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
-    </tr>
-    <tr class="even" data-alert="0" data-areas="">
-      <td class="td-empresa">
-        <a href="https://jobs.sap.com/search/?createNewAlert=false&q=&locationsearch=brasil&optionsFacetsDD_department=&optionsFacetsDD_customfield3=&optionsFacetsDD_country=" target="_blank" rel="noopener">SAP</a>
-        <span class="ats-badge ats-generic">generic</span>
-        
-        
-      </td>
-      <td class="td-num">718</td>
-      <td class="td-num td-hoje"><span style="color:#ef4444">erro</span></td>
-      <td class="td-num"><span class="td-muted">—</span> </td><td class="td-num td-hist"><span class="td-muted">—</span> </td><td class="td-num td-hist"><span class="td-muted">—</span> </td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
-      <td class="td-status"><span class="badge badge-error" title="Request failed with status code 404">ERRO</span></td>
     </tr></tbody>
       </table>
     </div>
@@ -1464,14 +1459,14 @@
     <div class="section-header"><div><span class="meta-label">Coleta anterior:</span> 15/05/2026, 14:25</div></div>
     <div class="stats">
       <div class="stat stat-total"><div class="stat-value">276</div><div class="stat-label">Empresas</div></div>
-      <div class="stat stat-total"><div class="stat-value">9.794</div><div class="stat-label">Total Vagas</div></div>
+      <div class="stat stat-total"><div class="stat-value">9.672</div><div class="stat-label">Total Vagas</div></div>
       <div class="stat stat-alert"><div class="stat-value">3</div><div class="stat-label">Alertas 🔥</div></div>
       <div class="stat stat-ok"><div class="stat-value">273</div><div class="stat-label">Normais</div></div>
       <div class="stat stat-err"><div class="stat-value">0</div><div class="stat-label">Erros</div></div>
     </div>
-    <div class="areas-section" id="areas-section-inhire" data-orig-title="9.794 vagas classificadas"><h2>📊 Distribuição por Área — <span id="areas-title-inhire">9.794 vagas classificadas</span></h2><div class="areas-grid"><div class="area-summary-card" style="border-left:4px solid #f59e0b" onclick="filterArea('inhire','Comercial',this)" title="Filtrar por Comercial">
+    <div class="areas-section" id="areas-section-inhire" data-orig-title="9.672 vagas classificadas"><h2>📊 Distribuição por Área — <span id="areas-title-inhire">9.672 vagas classificadas</span></h2><div class="areas-grid"><div class="area-summary-card" style="border-left:4px solid #f59e0b" onclick="filterArea('inhire','Comercial',this)" title="Filtrar por Comercial">
         <span class="area-summary-name">Comercial</span>
-        <span class="area-summary-count">1.797</span>
+        <span class="area-summary-count">1.743</span>
         <div class="area-summary-bar" style="background:#f1f5f9">
           <div style="width:18%;background:#f59e0b;height:100%;border-radius:4px"></div>
         </div>
@@ -1499,7 +1494,7 @@
         <span class="area-summary-pct">7%</span>
       </div><div class="area-summary-card" style="border-left:4px solid #8b5cf6" onclick="filterArea('inhire','RH & Pessoas',this)" title="Filtrar por RH & Pessoas">
         <span class="area-summary-name">RH & Pessoas</span>
-        <span class="area-summary-count">652</span>
+        <span class="area-summary-count">650</span>
         <div class="area-summary-bar" style="background:#f1f5f9">
           <div style="width:7%;background:#8b5cf6;height:100%;border-radius:4px"></div>
         </div>
@@ -1513,28 +1508,28 @@
         <span class="area-summary-pct">6%</span>
       </div><div class="area-summary-card" style="border-left:4px solid #ec4899" onclick="filterArea('inhire','Marketing & Design',this)" title="Filtrar por Marketing & Design">
         <span class="area-summary-name">Marketing & Design</span>
-        <span class="area-summary-count">623</span>
+        <span class="area-summary-count">589</span>
         <div class="area-summary-bar" style="background:#f1f5f9">
           <div style="width:6%;background:#ec4899;height:100%;border-radius:4px"></div>
         </div>
         <span class="area-summary-pct">6%</span>
-      </div><div class="area-summary-card" style="border-left:4px solid #84cc16" onclick="filterArea('inhire','Gestão',this)" title="Filtrar por Gestão">
-        <span class="area-summary-name">Gestão</span>
-        <span class="area-summary-count">551</span>
-        <div class="area-summary-bar" style="background:#f1f5f9">
-          <div style="width:6%;background:#84cc16;height:100%;border-radius:4px"></div>
-        </div>
-        <span class="area-summary-pct">6%</span>
       </div><div class="area-summary-card" style="border-left:4px solid #64748b" onclick="filterArea('inhire','Engenharia',this)" title="Filtrar por Engenharia">
         <span class="area-summary-name">Engenharia</span>
-        <span class="area-summary-count">537</span>
+        <span class="area-summary-count">536</span>
         <div class="area-summary-bar" style="background:#f1f5f9">
-          <div style="width:5%;background:#64748b;height:100%;border-radius:4px"></div>
+          <div style="width:6%;background:#64748b;height:100%;border-radius:4px"></div>
+        </div>
+        <span class="area-summary-pct">6%</span>
+      </div><div class="area-summary-card" style="border-left:4px solid #84cc16" onclick="filterArea('inhire','Gestão',this)" title="Filtrar por Gestão">
+        <span class="area-summary-name">Gestão</span>
+        <span class="area-summary-count">522</span>
+        <div class="area-summary-bar" style="background:#f1f5f9">
+          <div style="width:5%;background:#84cc16;height:100%;border-radius:4px"></div>
         </div>
         <span class="area-summary-pct">5%</span>
       </div><div class="area-summary-card" style="border-left:4px solid #10b981" onclick="filterArea('inhire','Financeiro',this)" title="Filtrar por Financeiro">
         <span class="area-summary-name">Financeiro</span>
-        <span class="area-summary-count">464</span>
+        <span class="area-summary-count">463</span>
         <div class="area-summary-bar" style="background:#f1f5f9">
           <div style="width:5%;background:#10b981;height:100%;border-radius:4px"></div>
         </div>
@@ -1576,7 +1571,7 @@
         <span class="area-summary-pct">1%</span>
       </div><div class="area-summary-card" style="border-left:4px solid #f97316" onclick="filterArea('inhire','Jurídico',this)" title="Filtrar por Jurídico">
         <span class="area-summary-name">Jurídico</span>
-        <span class="area-summary-count">127</span>
+        <span class="area-summary-count">126</span>
         <div class="area-summary-bar" style="background:#f1f5f9">
           <div style="width:1%;background:#f97316;height:100%;border-radius:4px"></div>
         </div>
@@ -1612,16 +1607,16 @@
           </tr>
         </thead>
         <tbody id="tableBody-inhire">
-    <tr class="alert-row" data-alert="1" data-areas="Comercial,Gestão,RH & Pessoas,Marketing & Design,Tecnologia,Financeiro,Operações,Outros,Administrativo,Consultoria,Customer Success,Engenharia,Varejo">
+    <tr class="alert-row" data-alert="1" data-areas="Comercial,Gestão,RH & Pessoas,Marketing & Design,Tecnologia,Financeiro,Operações,Outros,Administrativo,Consultoria,Customer Success,Varejo">
       <td class="td-empresa">
         <a href="https://v4company.inhire.app/vagas" target="_blank" rel="noopener">V4 Company</a>
         <span class="ats-badge ats-inhire">inhire</span>
-        <div class="area-bar"><span class="area-seg" style="width:43.3%;background:#f59e0b" title="Comercial: 486 (43.3%)"></span><span class="area-seg" style="width:26.6%;background:#ec4899" title="Marketing & Design: 299 (26.6%)"></span><span class="area-seg" style="width:22.3%;background:#84cc16" title="Gestão: 250 (22.3%)"></span><span class="area-seg" style="width:3.4%;background:#8b5cf6" title="RH & Pessoas: 38 (3.4%)"></span><span class="area-seg" style="width:2.0%;background:#10b981" title="Financeiro: 22 (2.0%)"></span><span class="area-seg" style="width:0.8%;background:#3b82f6" title="Tecnologia: 9 (0.8%)"></span><span class="area-seg" style="width:0.4%;background:#0ea5e9" title="Operações: 4 (0.4%)"></span><span class="area-seg" style="width:0.4%;background:#06b6d4" title="Customer Success: 4 (0.4%)"></span><span class="area-seg" style="width:0.3%;background:#9ca3af" title="Outros: 3 (0.3%)"></span><span class="area-seg" style="width:0.3%;background:#d97706" title="Administrativo: 3 (0.3%)"></span><span class="area-seg" style="width:0.3%;background:#14b8a6" title="Consultoria: 3 (0.3%)"></span><span class="area-seg" style="width:0.1%;background:#64748b" title="Engenharia: 1 (0.1%)"></span><span class="area-seg" style="width:0.1%;background:#fb7185" title="Varejo: 1 (0.1%)"></span></div><div class="area-chips"><span class="area-chip" style="border-color:#f59e0b;color:#f59e0b">Comercial <b>43%</b></span><span class="area-chip" style="border-color:#ec4899;color:#ec4899">Marketing & Design <b>27%</b></span><span class="area-chip" style="border-color:#84cc16;color:#84cc16">Gestão <b>22%</b></span></div>
+        <div class="area-bar"><span class="area-seg" style="width:43.2%;background:#f59e0b" title="Comercial: 433 (43.2%)"></span><span class="area-seg" style="width:26.4%;background:#ec4899" title="Marketing & Design: 265 (26.4%)"></span><span class="area-seg" style="width:22.0%;background:#84cc16" title="Gestão: 221 (22.0%)"></span><span class="area-seg" style="width:3.6%;background:#8b5cf6" title="RH & Pessoas: 36 (3.6%)"></span><span class="area-seg" style="width:2.1%;background:#10b981" title="Financeiro: 21 (2.1%)"></span><span class="area-seg" style="width:0.9%;background:#3b82f6" title="Tecnologia: 9 (0.9%)"></span><span class="area-seg" style="width:0.4%;background:#0ea5e9" title="Operações: 4 (0.4%)"></span><span class="area-seg" style="width:0.4%;background:#06b6d4" title="Customer Success: 4 (0.4%)"></span><span class="area-seg" style="width:0.3%;background:#9ca3af" title="Outros: 3 (0.3%)"></span><span class="area-seg" style="width:0.3%;background:#d97706" title="Administrativo: 3 (0.3%)"></span><span class="area-seg" style="width:0.3%;background:#14b8a6" title="Consultoria: 3 (0.3%)"></span><span class="area-seg" style="width:0.1%;background:#fb7185" title="Varejo: 1 (0.1%)"></span></div><div class="area-chips"><span class="area-chip" style="border-color:#f59e0b;color:#f59e0b">Comercial <b>43%</b></span><span class="area-chip" style="border-color:#ec4899;color:#ec4899">Marketing & Design <b>26%</b></span><span class="area-chip" style="border-color:#84cc16;color:#84cc16">Gestão <b>22%</b></span></div>
         
       </td>
       <td class="td-num">894</td>
-      <td class="td-num td-hoje">1123</td>
-      <td class="td-num"><span class="pos" style="font-size:14px">+229</span> <span class="pos td-pct">+25.6%</span></td><td class="td-num td-hist"><span class="pos">+198</span> <span class="pos td-pct">+21.4%</span></td><td class="td-num td-hist"><span class="pos">+185</span> <span class="pos td-pct">+19.7%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
+      <td class="td-num td-hoje">1003</td>
+      <td class="td-num"><span class="pos" style="font-size:14px">+109</span> <span class="pos td-pct">+12.2%</span></td><td class="td-num td-hist"><span class="pos">+78</span> <span class="pos td-pct">+8.4%</span></td><td class="td-num td-hist"><span class="pos">+65</span> <span class="pos td-pct">+6.9%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-alert">🔥 ALERTA</span></td>
     </tr>
     <tr class="alert-row" data-alert="1" data-areas="Operações,Educação,Comercial,Saúde,Marketing & Design,Outros,Customer Success,Administrativo,Tecnologia,RH & Pessoas,Consultoria,Gestão,Financeiro,Serviços Gerais,Jurídico,Engenharia">
@@ -2716,19 +2711,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-3.4%</span></td><td class="td-num td-hist"><span class="pos">+2</span> <span class="pos td-pct">+7.7%</span></td><td class="td-num td-hist"><span class="neg">-3</span> <span class="neg td-pct">-9.7%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Tecnologia,Consultoria,Operações,Administrativo,Comercial,RH & Pessoas,Outros,Financeiro,Jurídico,Engenharia">
-      <td class="td-empresa">
-        <a href="https://cerc.inhire.app/vagas" target="_blank" rel="noopener">CERC</a>
-        <span class="ats-badge ats-inhire">inhire</span>
-        <div class="area-bar"><span class="area-seg" style="width:35.7%;background:#3b82f6" title="Tecnologia: 10 (35.7%)"></span><span class="area-seg" style="width:17.9%;background:#f59e0b" title="Comercial: 5 (17.9%)"></span><span class="area-seg" style="width:10.7%;background:#14b8a6" title="Consultoria: 3 (10.7%)"></span><span class="area-seg" style="width:10.7%;background:#0ea5e9" title="Operações: 3 (10.7%)"></span><span class="area-seg" style="width:7.1%;background:#10b981" title="Financeiro: 2 (7.1%)"></span><span class="area-seg" style="width:3.6%;background:#d97706" title="Administrativo: 1 (3.6%)"></span><span class="area-seg" style="width:3.6%;background:#8b5cf6" title="RH & Pessoas: 1 (3.6%)"></span><span class="area-seg" style="width:3.6%;background:#9ca3af" title="Outros: 1 (3.6%)"></span><span class="area-seg" style="width:3.6%;background:#f97316" title="Jurídico: 1 (3.6%)"></span><span class="area-seg" style="width:3.6%;background:#64748b" title="Engenharia: 1 (3.6%)"></span></div><div class="area-chips"><span class="area-chip" style="border-color:#3b82f6;color:#3b82f6">Tecnologia <b>36%</b></span><span class="area-chip" style="border-color:#f59e0b;color:#f59e0b">Comercial <b>18%</b></span><span class="area-chip" style="border-color:#14b8a6;color:#14b8a6">Consultoria <b>11%</b></span></div>
-        
-      </td>
-      <td class="td-num">28</td>
-      <td class="td-num td-hoje">28</td>
-      <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="neg">-1</span> <span class="neg td-pct">-3.4%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
-      <td class="td-status"><span class="badge badge-ok">OK</span></td>
-    </tr>
-    <tr class="" data-alert="0" data-areas="Engenharia,Comercial,Marketing & Design,Operações,Consultoria,Gestão,RH & Pessoas,Financeiro,Outros,Customer Success,Tecnologia">
+    <tr class="even" data-alert="0" data-areas="Engenharia,Comercial,Marketing & Design,Operações,Consultoria,Gestão,RH & Pessoas,Financeiro,Outros,Customer Success,Tecnologia">
       <td class="td-empresa">
         <a href="https://zig.inhire.app/vagas" target="_blank" rel="noopener">Zig</a>
         <span class="ats-badge ats-inhire">inhire</span>
@@ -2740,7 +2723,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+4</span> <span class="pos td-pct">+16.7%</span></td><td class="td-num td-hist"><span class="neg">-2</span> <span class="neg td-pct">-6.7%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Tecnologia,Comercial,Consultoria,Operações,Customer Success,Outros,Marketing & Design">
+    <tr class="" data-alert="0" data-areas="Tecnologia,Comercial,Consultoria,Operações,Customer Success,Outros,Marketing & Design">
       <td class="td-empresa">
         <a href="https://frete.inhire.app/vagas" target="_blank" rel="noopener">Frete.com</a>
         <span class="ats-badge ats-inhire">inhire</span>
@@ -2752,7 +2735,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+3.8%</span></td><td class="td-num td-hist"><span class="neg">-3</span> <span class="neg td-pct">-10.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Tecnologia,Consultoria,Financeiro,Marketing & Design,RH & Pessoas,Comercial,Customer Success">
+    <tr class="even" data-alert="0" data-areas="Tecnologia,Consultoria,Financeiro,Marketing & Design,RH & Pessoas,Comercial,Customer Success">
       <td class="td-empresa">
         <a href="https://reclameaqui.inhire.app/vagas" target="_blank" rel="noopener">Reclame Aqui</a>
         <span class="ats-badge ats-inhire">inhire</span>
@@ -2764,7 +2747,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+1</span> <span class="pos td-pct">+3.8%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+3.8%</span></td><td class="td-num td-hist"><span class="neg">-2</span> <span class="neg td-pct">-6.9%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Tecnologia,Comercial,Outros,Educação,Consultoria,Operações,Engenharia,RH & Pessoas">
+    <tr class="" data-alert="0" data-areas="Tecnologia,Comercial,Outros,Educação,Consultoria,Operações,Engenharia,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://kstack.inhire.app/vagas" target="_blank" rel="noopener">KSTACK</a>
         <span class="ats-badge ats-inhire">inhire</span>
@@ -2776,7 +2759,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-3.6%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="neg">-1</span> <span class="neg td-pct">-3.6%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Serviços Gerais,Outros,Consultoria,Engenharia,Financeiro,Operações,Comercial,RH & Pessoas">
+    <tr class="even" data-alert="0" data-areas="Serviços Gerais,Outros,Consultoria,Engenharia,Financeiro,Operações,Comercial,RH & Pessoas">
       <td class="td-empresa">
         <a href="https://construtorapride.inhire.app/vagas" target="_blank" rel="noopener">Construtorapride</a>
         <span class="ats-badge ats-inhire">inhire</span>
@@ -2788,7 +2771,7 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+5</span> <span class="pos td-pct">+22.7%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="Consultoria,Financeiro,Administrativo,Marketing & Design,Outros,Jurídico,Comercial">
+    <tr class="" data-alert="0" data-areas="Consultoria,Financeiro,Administrativo,Marketing & Design,Outros,Jurídico,Comercial">
       <td class="td-empresa">
         <a href="https://bhub.inhire.app/vagas" target="_blank" rel="noopener">BHub</a>
         <span class="ats-badge ats-inhire">inhire</span>
@@ -2800,7 +2783,7 @@
       <td class="td-num"><span class="pos" style="font-size:14px">+2</span> <span class="pos td-pct">+8.0%</span></td><td class="td-num td-hist"><span class="pos">+4</span> <span class="pos td-pct">+17.4%</span></td><td class="td-num td-hist"><span class="pos">+4</span> <span class="pos td-pct">+17.4%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="RH & Pessoas,Financeiro,Jurídico,Marketing & Design,Administrativo,Tecnologia">
+    <tr class="even" data-alert="0" data-areas="RH & Pessoas,Financeiro,Jurídico,Marketing & Design,Administrativo,Tecnologia">
       <td class="td-empresa">
         <a href="https://andrademaia.inhire.app/vagas" target="_blank" rel="noopener">Andrade Maia</a>
         <span class="ats-badge ats-inhire">inhire</span>
@@ -2812,7 +2795,7 @@
       <td class="td-num"><span class="neg" style="font-size:14px">-1</span> <span class="neg td-pct">-3.7%</span></td><td class="td-num td-hist"><span class="pos">+1</span> <span class="pos td-pct">+4.0%</span></td><td class="td-num td-hist"><span class="neg">-8</span> <span class="neg td-pct">-23.5%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="even" data-alert="0" data-areas="RH & Pessoas,Tecnologia,Outros,Comercial,Gestão,Financeiro,Consultoria">
+    <tr class="" data-alert="0" data-areas="RH & Pessoas,Tecnologia,Outros,Comercial,Gestão,Financeiro,Consultoria">
       <td class="td-empresa">
         <a href="https://jobler.inhire.app/vagas" target="_blank" rel="noopener">Jobler</a>
         <span class="ats-badge ats-inhire">inhire</span>
@@ -2822,6 +2805,18 @@
       <td class="td-num">26</td>
       <td class="td-num td-hoje">26</td>
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="neg">-1</span> <span class="neg td-pct">-3.7%</span></td><td class="td-num td-hist"><span class="neg">-3</span> <span class="neg td-pct">-10.3%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
+      <td class="td-status"><span class="badge badge-ok">OK</span></td>
+    </tr>
+    <tr class="even" data-alert="0" data-areas="Varejo,Outros,Comercial,Operações,Administrativo,Consultoria">
+      <td class="td-empresa">
+        <a href="https://diamantetintas.inhire.app/vagas" target="_blank" rel="noopener">Diamante Tintas</a>
+        <span class="ats-badge ats-inhire">inhire</span>
+        <div class="area-bar"><span class="area-seg" style="width:34.6%;background:#f59e0b" title="Comercial: 9 (34.6%)"></span><span class="area-seg" style="width:30.8%;background:#fb7185" title="Varejo: 8 (30.8%)"></span><span class="area-seg" style="width:15.4%;background:#9ca3af" title="Outros: 4 (15.4%)"></span><span class="area-seg" style="width:11.5%;background:#0ea5e9" title="Operações: 3 (11.5%)"></span><span class="area-seg" style="width:3.8%;background:#d97706" title="Administrativo: 1 (3.8%)"></span><span class="area-seg" style="width:3.8%;background:#14b8a6" title="Consultoria: 1 (3.8%)"></span></div><div class="area-chips"><span class="area-chip" style="border-color:#f59e0b;color:#f59e0b">Comercial <b>35%</b></span><span class="area-chip" style="border-color:#fb7185;color:#fb7185">Varejo <b>31%</b></span><span class="area-chip" style="border-color:#9ca3af;color:#9ca3af">Outros <b>15%</b></span></div>
+        
+      </td>
+      <td class="td-num">25</td>
+      <td class="td-num td-hoje">26</td>
+      <td class="td-num"><span class="pos" style="font-size:14px">+1</span> <span class="pos td-pct">+4.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
     <tr class="" data-alert="0" data-areas="Tecnologia,Outros,Consultoria,Marketing & Design,RH & Pessoas,Comercial,Gestão">
@@ -2872,16 +2867,16 @@
       <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="pos">+3</span> <span class="pos td-pct">+13.0%</span></td><td class="td-num td-hist"><span class="pos">+7</span> <span class="pos td-pct">+36.8%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
-    <tr class="" data-alert="0" data-areas="Varejo,Outros,Comercial,Operações,Administrativo,Consultoria">
+    <tr class="" data-alert="0" data-areas="Tecnologia,Consultoria,Administrativo,Comercial,RH & Pessoas,Operações,Outros,Financeiro,Engenharia">
       <td class="td-empresa">
-        <a href="https://diamantetintas.inhire.app/vagas" target="_blank" rel="noopener">Diamante Tintas</a>
+        <a href="https://cerc.inhire.app/vagas" target="_blank" rel="noopener">CERC</a>
         <span class="ats-badge ats-inhire">inhire</span>
-        <div class="area-bar"><span class="area-seg" style="width:36.0%;background:#f59e0b" title="Comercial: 9 (36.0%)"></span><span class="area-seg" style="width:32.0%;background:#fb7185" title="Varejo: 8 (32.0%)"></span><span class="area-seg" style="width:16.0%;background:#9ca3af" title="Outros: 4 (16.0%)"></span><span class="area-seg" style="width:8.0%;background:#0ea5e9" title="Operações: 2 (8.0%)"></span><span class="area-seg" style="width:4.0%;background:#d97706" title="Administrativo: 1 (4.0%)"></span><span class="area-seg" style="width:4.0%;background:#14b8a6" title="Consultoria: 1 (4.0%)"></span></div><div class="area-chips"><span class="area-chip" style="border-color:#f59e0b;color:#f59e0b">Comercial <b>36%</b></span><span class="area-chip" style="border-color:#fb7185;color:#fb7185">Varejo <b>32%</b></span><span class="area-chip" style="border-color:#9ca3af;color:#9ca3af">Outros <b>16%</b></span></div>
+        <div class="area-bar"><span class="area-seg" style="width:40.0%;background:#3b82f6" title="Tecnologia: 10 (40.0%)"></span><span class="area-seg" style="width:16.0%;background:#f59e0b" title="Comercial: 4 (16.0%)"></span><span class="area-seg" style="width:12.0%;background:#14b8a6" title="Consultoria: 3 (12.0%)"></span><span class="area-seg" style="width:8.0%;background:#0ea5e9" title="Operações: 2 (8.0%)"></span><span class="area-seg" style="width:8.0%;background:#10b981" title="Financeiro: 2 (8.0%)"></span><span class="area-seg" style="width:4.0%;background:#d97706" title="Administrativo: 1 (4.0%)"></span><span class="area-seg" style="width:4.0%;background:#8b5cf6" title="RH & Pessoas: 1 (4.0%)"></span><span class="area-seg" style="width:4.0%;background:#9ca3af" title="Outros: 1 (4.0%)"></span><span class="area-seg" style="width:4.0%;background:#64748b" title="Engenharia: 1 (4.0%)"></span></div><div class="area-chips"><span class="area-chip" style="border-color:#3b82f6;color:#3b82f6">Tecnologia <b>40%</b></span><span class="area-chip" style="border-color:#f59e0b;color:#f59e0b">Comercial <b>16%</b></span><span class="area-chip" style="border-color:#14b8a6;color:#14b8a6">Consultoria <b>12%</b></span></div>
         
       </td>
-      <td class="td-num">25</td>
+      <td class="td-num">28</td>
       <td class="td-num td-hoje">25</td>
-      <td class="td-num"><span class="td-muted" style="font-size:14px">0</span> <span class="td-muted td-pct">0.0%</span></td><td class="td-num td-hist"><span class="neg">-1</span> <span class="neg td-pct">-3.8%</span></td><td class="td-num td-hist"><span class="neg">-1</span> <span class="neg td-pct">-3.8%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
+      <td class="td-num"><span class="neg" style="font-size:14px">-3</span> <span class="neg td-pct">-10.7%</span></td><td class="td-num td-hist"><span class="neg">-3</span> <span class="neg td-pct">-10.7%</span></td><td class="td-num td-hist"><span class="neg">-4</span> <span class="neg td-pct">-13.8%</span></td><td class="td-num td-hist"><span class="td-muted">—</span> </td>
       <td class="td-status"><span class="badge badge-ok">OK</span></td>
     </tr>
     <tr class="even" data-alert="0" data-areas="Comercial,Consultoria,Tecnologia,Outros,Operações,RH & Pessoas,Financeiro">
@@ -4933,7 +4928,7 @@
   <div class="page-title"><h1>🎯 Briefings RPO</h1><p class="page-sub">Oportunidades de prospecção ranqueadas por score. Score calculado a partir de eventos detectados (boom, stale, structural).</p></div>
   <div style="padding: 0 24px 24px;">
     
-  <script>window._briefingsData = [{"empresa":"Raízen","url":"https://genteraizen.gupy.io/","score":89,"label":"🔥 HOT","vagas":384,"hasStale":false,"text":"## Raízen — 🔥 HOT (Score: 89)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Jurídico (+2)\n- 🚀 Boom 7d · Tecnologia (+3)\n- 🚀 Boom 7d · Operações (+16)\n- 🚀 Boom 7d · Jurídico (+2)\n\n**Variação:** Δ7d: +15 (total: 384)","enriched":true,"hipotese":"Raízen acelerou contratações em Operações (30% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Jurídico (+2 vagas) detectado","🚀 Boom 7d em Tecnologia (+3 vagas) detectado","🚀 Boom 7d em Operações (+16 vagas) detectado","+15 vagas em 7 dias","Mix equilibrado de seniorities"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Raízen — vocês abriram 15 novas vagas em 7 dias especialmente em Operações. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","balanced","product_growth","general_expansion","hot_priority"],"topAreas":["Operações (116)","Engenharia (87)","Serviços Gerais (48)"],"_source":"main"},{"empresa":"Motiva (Santander)","url":"https://motiva.gupy.io/","score":80,"label":"🔥 HOT","vagas":118,"hasStale":false,"text":"## Motiva (Santander) — 🔥 HOT (Score: 80)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Outros (+5)\n- 🚀 Boom 7d · Tecnologia (+2)\n- 🚀 Boom 7d · Financeiro (+3)\n- 🚀 Boom 7d · Outros (+5)\n\n**Variação:** Δ7d: +7 (total: 118)","enriched":true,"hipotese":"Motiva (Santander) acelerou contratações em Engenharia (31% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Outros (+5 vagas) detectado","🚀 Boom 7d em Tecnologia (+2 vagas) detectado","🚀 Boom 7d em Financeiro (+3 vagas) detectado","+7 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Motiva (Santander) — vocês abriram 7 novas vagas em 7 dias especialmente em Engenharia. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","base_scaling","support_scale","general_expansion","hot_priority"],"topAreas":["Engenharia (37)","Operações (25)","Serviços Gerais (16)"],"_source":"main"},{"empresa":"Randoncorp","url":"https://randoncorp.gupy.io/","score":78,"label":"🔥 HOT","vagas":188,"hasStale":false,"text":"## Randoncorp — 🔥 HOT (Score: 78)\n\n**Gatilhos:**\n- 🔺 Spike 24h · Operações\n- 🚀 Boom 7d · Operações (+22)\n- 🚀 Boom 7d · Consultoria (+4)\n- 🚀 Boom 7d · Tecnologia (+2)\n\n**Variação:** Δ7d: +32 (total: 188)","enriched":true,"hipotese":"Randoncorp acelerou contratações em Operações (34% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🔺 Spike 24h em Operações detectado","🚀 Boom 7d em Operações (+22 vagas) detectado","🚀 Boom 7d em Consultoria (+4 vagas) detectado","+32 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Randoncorp — vocês abriram 32 novas vagas em 7 dias especialmente em Operações. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","base_scaling","data_analytics","general_expansion","hot_priority"],"topAreas":["Operações (64)","Engenharia (49)","Outros (32)"],"_source":"main"},{"empresa":"Ambev","url":"https://ambev.gupy.io/","score":75,"label":"🔥 HOT","vagas":371,"hasStale":false,"text":"## Ambev — 🔥 HOT (Score: 75)\n\n**Gatilhos:**\n- 🔺 Spike 24h · RH & Pessoas\n- 🔺 Spike 24h · RH & Pessoas (+5)\n- 🚀 Boom 7d · Engenharia (+9)\n- 🚀 Boom 7d · Engenharia (+10)\n\n**Variação:** Δ7d: +31 (total: 371)","enriched":true,"hipotese":"Ambev acelerou contratações em Comercial (33% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🔺 Spike 24h em RH & Pessoas detectado","🔺 Spike 24h em RH & Pessoas (+5 vagas) detectado","🚀 Boom 7d em Engenharia (+9 vagas) detectado","+31 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Ambev — vocês abriram 31 novas vagas em 7 dias especialmente em Comercial. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","base_scaling","sales_scaling","general_expansion","hot_priority"],"topAreas":["Comercial (122)","Operações (75)","RH & Pessoas (49)"],"_source":"main"},{"empresa":"Energisa","url":"https://grupoenergisa.gupy.io/","score":75,"label":"🔥 HOT","vagas":153,"hasStale":false,"text":"## Energisa — 🔥 HOT (Score: 75)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Engenharia (+6)\n- 🚀 Boom 7d · Engenharia (+6)\n- 🚀 Boom 7d · Engenharia (+9)\n- 🚀 Boom 7d · Operações (+4)\n\n**Variação:** Δ7d: +7 (total: 153)","enriched":true,"hipotese":"Energisa acelerou contratações em Serviços Gerais (28% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Engenharia (+6 vagas) detectado","🚀 Boom 7d em Engenharia (+6 vagas) detectado","🚀 Boom 7d em Engenharia (+9 vagas) detectado","+7 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Energisa — vocês abriram 7 novas vagas em 7 dias especialmente em Serviços Gerais. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","building_leadership","product_growth","general_expansion","hot_priority"],"topAreas":["Serviços Gerais (43)","Comercial (32)","Engenharia (25)"],"_source":"main"},{"empresa":"V4 Company","url":"https://v4company.inhire.app/vagas","score":72,"label":"🔥 HOT","vagas":1123,"hasStale":false,"text":"## V4 Company — 🔥 HOT (Score: 72)\n\n**Gatilhos:**\n- 🔺 Spike 24h · RH & Pessoas\n- 🔺 Spike 24h · RH & Pessoas\n- 🚀 Boom 7d · Comercial (+17)\n- 🚀 Boom 7d · Marketing & Design (+19)\n\n**Variação:** Δ7d: +198 (total: 1123)","enriched":true,"hipotese":"V4 Company acelerou contratações em Comercial (43% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🔺 Spike 24h em RH & Pessoas detectado","🔺 Spike 24h em RH & Pessoas detectado","🚀 Boom 7d em Comercial (+17 vagas) detectado","+198 vagas em 7 dias","Maior foco em Comercial, possível nova vertical ou ramp-up"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da V4 Company — vocês abriram 198 novas vagas em 7 dias especialmente em Comercial. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","nova_vertical","hot_priority"],"topAreas":["Comercial (486)","Marketing & Design (299)","Gestão (250)"],"_source":"inhire"},{"empresa":"Vivo (Telefônica Brasil)","url":"https://vivo.gupy.io/","score":63,"label":"🔥 HOT","vagas":94,"hasStale":false,"text":"## Vivo (Telefônica Brasil) — 🔥 HOT (Score: 63)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+2)\n- 🚀 Boom 7d · Tecnologia (+2)\n- 🚀 Boom 7d · Tecnologia (+2)\n- 🚀 Boom 7d · Tecnologia (+3)\n\n**Variação:** Δ7d: +2 (total: 94)","enriched":true,"hipotese":"Vivo (Telefônica Brasil) acelerou contratações em Comercial (35% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+2 vagas) detectado","🚀 Boom 7d em Tecnologia (+2 vagas) detectado","🚀 Boom 7d em Tecnologia (+2 vagas) detectado","+2 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], a Vivo (Telefônica Brasil) está com 94 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"alta","tags":["crescimento_rapido","building_leadership","engineering","nova_vertical"],"topAreas":["Comercial (33)","Gestão (18)","Outros (16)"],"_source":"main"},{"empresa":"JBS","url":"https://grupojbs.gupy.io/","score":61,"label":"🟡 WARM","vagas":331,"hasStale":false,"text":"## JBS — 🟡 WARM (Score: 61)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+3)\n- 🚀 Boom 7d · Engenharia (+13)\n- 🚀 Boom 7d · Engenharia (+13)\n- 🚀 Boom 7d · Engenharia (+13)\n\n**Variação:** Δ7d: +27 (total: 331)","enriched":true,"hipotese":"JBS acelerou contratações em Comercial (29% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+3 vagas) detectado","🚀 Boom 7d em Engenharia (+13 vagas) detectado","🚀 Boom 7d em Engenharia (+13 vagas) detectado","+27 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da JBS — vocês abriram 27 novas vagas em 7 dias especialmente em Comercial. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","building_leadership","sales_scaling","general_expansion"],"topAreas":["Comercial (95)","Operações (83)","Engenharia (37)"],"_source":"main"},{"empresa":"Votorantim Cimentos","url":"https://votorantimcimentos.gupy.io/","score":59,"label":"🟡 WARM","vagas":162,"hasStale":false,"text":"## Votorantim Cimentos — 🟡 WARM (Score: 59)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Outros (+3)\n- 🚀 Boom 7d · Outros (+6)\n- 🚀 Boom 7d · Outros (+5)\n- 🚀 Boom 7d · Outros (+4)\n\n**Variação:** Δ7d: +9 (total: 162)","enriched":true,"hipotese":"Votorantim Cimentos acelerou contratações em Operações (44% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Outros (+3 vagas) detectado","🚀 Boom 7d em Outros (+6 vagas) detectado","🚀 Boom 7d em Outros (+5 vagas) detectado","+9 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Votorantim Cimentos — vocês abriram 9 novas vagas em 7 dias especialmente em Operações. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"alta","tags":["crescimento_rapido","building_leadership","product_growth","nova_vertical"],"topAreas":["Operações (72)","Serviços Gerais (30)","Engenharia (21)"],"_source":"main"},{"empresa":"Porto","url":"https://porto.gupy.io/","score":58,"label":"🟡 WARM","vagas":211,"hasStale":false,"text":"## Porto — 🟡 WARM (Score: 58)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Marketing & Design (+15)\n- 🚀 Boom 7d · Marketing & Design (+16)\n- 🚀 Boom 7d · Marketing & Design (+16)\n- 🚀 Boom 7d · Marketing & Design (+16)\n\n**Variação:** Δ7d: +20 (total: 211)","enriched":true,"hipotese":"Porto acelerou contratações em Tecnologia (27% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Marketing & Design (+15 vagas) detectado","🚀 Boom 7d em Marketing & Design (+16 vagas) detectado","🚀 Boom 7d em Marketing & Design (+16 vagas) detectado","+20 vagas em 7 dias","Maioria sênior — contratação especializada, ciclo de seleção longo"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Porto — vocês abriram 20 novas vagas em 7 dias especialmente em Tecnologia. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Precisamos de gente muito específica, RPO não vai achar.\" → Rebater: nosso banco de sêniores em Tecnologia é curado; mostramos perfis em até 5 dias úteis.","confianca":"alta","tags":["crescimento_rapido","senior_heavy","sales_scaling","general_expansion"],"topAreas":["Tecnologia (56)","Comercial (47)","Consultoria (25)"],"_source":"main"},{"empresa":"Suzano","url":"https://suzano.gupy.io/","score":57,"label":"🟡 WARM","vagas":48,"hasStale":false,"text":"## Suzano — 🟡 WARM (Score: 57)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Operações (+4)\n- 🚀 Boom 7d · Operações (+3)\n- 🚀 Boom 7d · Operações (+4)\n- 🚀 Boom 7d · Engenharia (+2)\n\n**Variação:** Δ7d: +8 (total: 48)","enriched":true,"hipotese":"Suzano cresce consistentemente (+18 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Operações (+4 vagas) detectado","🚀 Boom 7d em Operações (+3 vagas) detectado","🚀 Boom 7d em Operações (+4 vagas) detectado","+8 vagas em 7 dias","Mix equilibrado de seniorities"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Suzano — vocês abriram 8 novas vagas em 7 dias especialmente em Operações. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","crescimento_estrutural","balanced","operations_scale","general_expansion"],"topAreas":["Operações (14)","Engenharia (10)","Outros (5)"],"_source":"main"},{"empresa":"Assaí Atacadista","url":"https://assai.gupy.io/","score":51,"label":"🟡 WARM","vagas":2155,"hasStale":false,"text":"## Assaí Atacadista — 🟡 WARM (Score: 51)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Varejo (+21)\n- 🚀 Boom 7d · Outros (+22)\n- 🚀 Boom 7d · Varejo (+63)\n- 🚀 Boom 7d · Varejo (+58)\n\n**Variação:** Δ7d: +162 (total: 2155)","enriched":true,"hipotese":"Assaí Atacadista acelerou contratações em Varejo (69% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Varejo (+21 vagas) detectado","🚀 Boom 7d em Outros (+22 vagas) detectado","🚀 Boom 7d em Varejo (+63 vagas) detectado","+162 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Assaí Atacadista — vocês abriram 162 novas vagas em 7 dias especialmente em Varejo. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","base_scaling","product_growth","focused"],"topAreas":["Varejo (1481)","Outros (287)","Operações (113)"],"_source":"main"},{"empresa":"Banco Pan","url":"https://job-boards.greenhouse.io/bancopan","score":51,"label":"🟡 WARM","vagas":61,"hasStale":false,"text":"## Banco Pan — 🟡 WARM (Score: 51)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Financeiro (+3)\n- 🚀 Boom 7d · Financeiro (+3)\n- 🚀 Boom 7d · Financeiro (+3)\n- 🚀 Boom 7d · Financeiro (+3)\n\n**Variação:** Δ7d: +6 (total: 61)","enriched":true,"hipotese":"Banco Pan acelerou contratações em Tecnologia (31% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Financeiro (+3 vagas) detectado","🚀 Boom 7d em Financeiro (+3 vagas) detectado","🚀 Boom 7d em Financeiro (+3 vagas) detectado","+6 vagas em 7 dias","Maioria sênior — contratação especializada, ciclo de seleção longo"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Banco Pan — vocês abriram 6 novas vagas em 7 dias especialmente em Tecnologia. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Precisamos de gente muito específica, RPO não vai achar.\" → Rebater: nosso banco de sêniores em Tecnologia é curado; mostramos perfis em até 5 dias úteis.","confianca":"alta","tags":["crescimento_rapido","senior_heavy","engineering","general_expansion"],"topAreas":["Tecnologia (19)","Consultoria (8)","Marketing & Design (8)"],"_source":"main"},{"empresa":"Grupo Equatorial","url":"https://equatorialenergia.gupy.io/","score":48,"label":"🟡 WARM","vagas":67,"hasStale":false,"text":"## Grupo Equatorial — 🟡 WARM (Score: 48)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Comercial (+2)\n- 🚀 Boom 7d · Comercial (+2)\n- 🚀 Boom 7d · Operações (+2)\n- 🚀 Boom 7d · Comercial (+2)\n\n**Variação:** Δ7d: +3 (total: 67)","enriched":true,"hipotese":"Grupo Equatorial acelerou contratações em Engenharia (31% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Comercial (+2 vagas) detectado","🚀 Boom 7d em Comercial (+2 vagas) detectado","🚀 Boom 7d em Operações (+2 vagas) detectado","+3 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], a Grupo Equatorial está com 67 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","base_scaling","operations_scale","general_expansion"],"topAreas":["Engenharia (21)","Outros (10)","Comercial (9)"],"_source":"main"},{"empresa":"Petz","url":"https://petz.gupy.io/","score":47,"label":"🟡 WARM","vagas":317,"hasStale":false,"text":"## Petz — 🟡 WARM (Score: 47)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Marketing & Design (+3)\n- 🚀 Boom 7d · Marketing & Design (+4)\n- 🚀 Boom 7d · Marketing & Design (+4)\n- 🚀 Boom 7d · Marketing & Design (+4)\n\n**Variação:** Δ7d: +19 (total: 317)","enriched":true,"hipotese":"Petz acelerou contratações em Administrativo (28% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Marketing & Design (+3 vagas) detectado","🚀 Boom 7d em Marketing & Design (+4 vagas) detectado","🚀 Boom 7d em Marketing & Design (+4 vagas) detectado","+19 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Petz — vocês abriram 19 novas vagas em 7 dias especialmente em Administrativo. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","building_leadership","product_growth","general_expansion"],"topAreas":["Administrativo (89)","Varejo (74)","Outros (72)"],"_source":"main"},{"empresa":"Hospital Sírio-Libanês (IRSSL)","url":"https://irssl.gupy.io/","score":47,"label":"🟡 WARM","vagas":180,"hasStale":false,"text":"## Hospital Sírio-Libanês (IRSSL) — 🟡 WARM (Score: 47)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Saúde (+17)\n- 🚀 Boom 7d · RH & Pessoas (+3)\n- 🚀 Boom 7d · Saúde (+17)\n- 🚀 Boom 7d · RH & Pessoas (+3)\n\n**Variação:** Δ7d: +6 (total: 180)","enriched":true,"hipotese":"Hospital Sírio-Libanês (IRSSL) cresce consistentemente (+30 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Saúde (+17 vagas) detectado","🚀 Boom 7d em RH & Pessoas (+3 vagas) detectado","🚀 Boom 7d em Saúde (+17 vagas) detectado","+6 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Hospital Sírio-Libanês (IRSSL) — vocês abriram 6 novas vagas em 7 dias especialmente em Saúde. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","crescimento_estrutural","base_scaling","product_growth","focused"],"topAreas":["Saúde (112)","Outros (30)","Administrativo (11)"],"_source":"main"},{"empresa":"Azul","url":"https://voeazul.gupy.io/","score":45,"label":"🟡 WARM","vagas":84,"hasStale":false,"text":"## Azul — 🟡 WARM (Score: 45)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Consultoria (+6)\n- 🚀 Boom 7d · Consultoria (+7)\n- 🚀 Boom 7d · Gestão (+3)\n- 🚀 Boom 7d · Gestão (+3)\n","enriched":true,"hipotese":"Azul acelerou contratações em Consultoria (20% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Consultoria (+6 vagas) detectado","🚀 Boom 7d em Consultoria (+7 vagas) detectado","🚀 Boom 7d em Gestão (+3 vagas) detectado","Estruturando liderança — fase de profissionalização ou expansão de BU","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], a Azul está com 84 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","building_leadership","support_scale","general_expansion"],"topAreas":["Consultoria (17)","Outros (13)","Engenharia (13)"],"_source":"main"},{"empresa":"Volkswagen do Brasil","url":"https://vwbrasil.gupy.io/","score":43,"label":"🟡 WARM","vagas":25,"hasStale":false,"text":"## Volkswagen do Brasil — 🟡 WARM (Score: 43)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+3)\n- 🚀 Boom 7d · Outros (+2)\n- 🚀 Boom 7d · Tecnologia (+3)\n- 🚀 Boom 7d · Outros (+2)\n\n**Variação:** Δ7d: +5 (total: 25)","enriched":true,"hipotese":"Volkswagen do Brasil acelerou contratações em Tecnologia (32% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+3 vagas) detectado","🚀 Boom 7d em Outros (+2 vagas) detectado","🚀 Boom 7d em Tecnologia (+3 vagas) detectado","+5 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Volkswagen do Brasil — vocês abriram 5 novas vagas em 7 dias especialmente em Tecnologia. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","building_leadership","finance_control","general_expansion"],"topAreas":["Tecnologia (8)","Outros (6)","Financeiro (3)"],"_source":"main"},{"empresa":"Grupo Tigre","url":"https://tigre.gupy.io/","score":42,"label":"🟡 WARM","vagas":58,"hasStale":false,"text":"## Grupo Tigre — 🟡 WARM (Score: 42)\n\n**Gatilhos:**\n- 🔺 Spike 24h · Financeiro\n- 🔺 Spike 24h · Financeiro\n- 🚀 Boom 7d · Administrativo (+4)\n- 🚀 Boom 7d · RH & Pessoas (+8)\n","enriched":true,"hipotese":"Grupo Tigre acelerou contratações em Financeiro (26% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🔺 Spike 24h em Financeiro detectado","🔺 Spike 24h em Financeiro detectado","🚀 Boom 7d em Administrativo (+4 vagas) detectado","Mix equilibrado de seniorities","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], a Grupo Tigre está com 58 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","balanced","finance_control","general_expansion"],"topAreas":["Financeiro (15)","Consultoria (8)","Engenharia (6)"],"_source":"main"},{"empresa":"mileto.io","url":"https://mileto.inhire.app/vagas","score":42,"label":"🟡 WARM","vagas":29,"hasStale":false,"text":"## mileto.io — 🟡 WARM (Score: 42)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Comercial (+3)\n- 🚀 Boom 7d · Operações (+2)\n- 🚀 Boom 7d · RH & Pessoas (+4)\n\n**Variação:** Δ7d: +1 (total: 29)","enriched":true,"hipotese":"mileto.io cresce consistentemente (+14 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Comercial (+3 vagas) detectado","🚀 Boom 7d em Operações (+2 vagas) detectado","🚀 Boom 7d em RH & Pessoas (+4 vagas) detectado","+1 vagas em 7 dias","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], a mileto.io está com 29 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"media","tags":["crescimento_rapido","crescimento_estrutural","general_expansion"],"topAreas":["Comercial (8)","Operações (6)","RH & Pessoas (6)"],"_source":"inhire"},{"empresa":"Grupo Lider","url":"https://grupolider.inhire.app/vagas","score":38,"label":"🟡 WARM","vagas":185,"hasStale":false,"text":"## Grupo Lider — 🟡 WARM (Score: 38)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Marketing & Design (+2)\n- 🚀 Boom 7d · RH & Pessoas (+2)\n- 🚀 Boom 7d · RH & Pessoas (+3)\n- 🔺 Spike 24h · RH & Pessoas\n","enriched":true,"hipotese":"Grupo Lider acelerou contratações em Comercial (45% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Marketing & Design (+2 vagas) detectado","🚀 Boom 7d em RH & Pessoas (+2 vagas) detectado","🚀 Boom 7d em RH & Pessoas (+3 vagas) detectado","Maior foco em Comercial, possível nova vertical ou ramp-up","Aceleração recente: +29 vagas, ritmo crescendo na segunda quinzena"],"pitch_sdr":"\"Oi [nome], a Grupo Lider está com 185 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","nova_vertical"],"topAreas":["Comercial (84)","Serviços Gerais (26)","RH & Pessoas (18)"],"_source":"inhire"},{"empresa":"Zallpy","url":"https://zallpy.inhire.app/vagas","score":38,"label":"🟡 WARM","vagas":23,"hasStale":false,"text":"## Zallpy — 🟡 WARM (Score: 38)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+7)\n- 🚀 Boom 7d · Outros (+3)\n","enriched":true,"hipotese":"Zallpy cresce consistentemente (+5 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Tecnologia (+7 vagas) detectado","🚀 Boom 7d em Outros (+3 vagas) detectado","Concentrado em Tecnologia (70%) — pressão forte numa única área","Crescimento consistente de 28% nos últimos 30d — demanda crescente e sustentada"],"pitch_sdr":"\"Oi [nome], notei que a Zallpy está concentrando 70% das contratações em Tecnologia. Esse tipo de concentração em uma área específica é exatamente onde nosso RPO especializado entrega mais rápido. Posso te mostrar como funciona em 15 minutos?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","crescimento_estrutural","focused"],"topAreas":["Tecnologia (16)","Outros (3)","RH & Pessoas (3)"],"_source":"inhire"},{"empresa":"Grupo UNINTER","url":"https://uninter.inhire.app/vagas","score":33,"label":"🟡 WARM","vagas":32,"hasStale":false,"text":"## Grupo UNINTER — 🟡 WARM (Score: 33)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Comercial (+2)\n- 🚀 Boom 7d · Comercial (+2)\n- 🚀 Boom 7d · Saúde (+4)\n\n**Variação:** Δ7d: +3 (total: 32)","enriched":true,"hipotese":"Grupo UNINTER acelerou contratações em Educação (22% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Comercial (+2 vagas) detectado","🚀 Boom 7d em Comercial (+2 vagas) detectado","🚀 Boom 7d em Saúde (+4 vagas) detectado","+3 vagas em 7 dias","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], a Grupo UNINTER está com 32 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"media","tags":["crescimento_rapido","general_expansion"],"topAreas":["Educação (7)","Saúde (7)","Comercial (4)"],"_source":"inhire"},{"empresa":"Essencial Nutrição","url":"https://essencialnutricao.inhire.app/vagas","score":29,"label":"🟡 WARM","vagas":157,"hasStale":false,"text":"## Essencial Nutrição — 🟡 WARM (Score: 29)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Serviços Gerais (+24)\n- 🚀 Boom 7d · Serviços Gerais (+27)\n\n**Variação:** Δ7d: +14 (total: 157)","enriched":true,"hipotese":"Essencial Nutrição acelerou contratações em Serviços Gerais (84% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Serviços Gerais (+24 vagas) detectado","🚀 Boom 7d em Serviços Gerais (+27 vagas) detectado","+14 vagas em 7 dias","Concentrado em Serviços Gerais (84%) — pressão forte numa única área","Queda de 11% nos últimos 30d — monitorar antes de prospectar"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Essencial Nutrição — vocês abriram 14 novas vagas em 7 dias especialmente em Serviços Gerais. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","focused"],"topAreas":["Serviços Gerais (132)","Gestão (9)","Operações (8)"],"_source":"inhire"},{"empresa":"iMile Delivery","url":"https://imile.inhire.app/vagas","score":24,"label":"🟡 WARM","vagas":66,"hasStale":false,"text":"## iMile Delivery — 🟡 WARM (Score: 24)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Engenharia (+4)\n\n**Variação:** Δ7d: +1 (total: 66)","enriched":true,"hipotese":"iMile Delivery cresce consistentemente (+14 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Engenharia (+4 vagas) detectado","+1 vagas em 7 dias","Concentrado em Operações (62%) — pressão forte numa única área","Crescimento consistente de 27% nos últimos 30d — demanda crescente e sustentada"],"pitch_sdr":"\"Oi [nome], notei que a iMile Delivery está concentrando 62% das contratações em Operações. Esse tipo de concentração em uma área específica é exatamente onde nosso RPO especializado entrega mais rápido. Posso te mostrar como funciona em 15 minutos?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","crescimento_estrutural","focused"],"topAreas":["Operações (41)","Administrativo (8)","Engenharia (5)"],"_source":"inhire"},{"empresa":"Azos","url":"https://azos.inhire.app/vagas","score":24,"label":"🟡 WARM","vagas":17,"hasStale":false,"text":"## Azos — 🟡 WARM (Score: 24)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+3)\n\n**Variação:** Δ7d: +1 (total: 17)","enriched":true,"hipotese":"Azos cresce consistentemente (+7 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Tecnologia (+3 vagas) detectado","+1 vagas em 7 dias","Maior foco em Tecnologia, possível nova vertical ou ramp-up","Crescimento consistente de 70% nos últimos 30d — demanda crescente e sustentada"],"pitch_sdr":"\"Oi [nome], a Azos está com 17 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","crescimento_estrutural","nova_vertical"],"topAreas":["Tecnologia (9)","Consultoria (2)","Comercial (2)"],"_source":"inhire"},{"empresa":"MazzaTech","url":"https://mazzatech.inhire.app/vagas","score":23,"label":"🟡 WARM","vagas":113,"hasStale":false,"text":"## MazzaTech — 🟡 WARM (Score: 23)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Engenharia (+5)\n","enriched":true,"hipotese":"MazzaTech acelerou contratações em Tecnologia (78% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Engenharia (+5 vagas) detectado","Concentrado em Tecnologia (78%) — pressão forte numa única área"],"pitch_sdr":"\"Oi [nome], notei que a MazzaTech está concentrando 78% das contratações em Tecnologia. Esse tipo de concentração em uma área específica é exatamente onde nosso RPO especializado entrega mais rápido. Posso te mostrar como funciona em 15 minutos?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","focused"],"topAreas":["Tecnologia (88)","Consultoria (8)","Engenharia (6)"],"_source":"inhire"},{"empresa":"Deal","url":"https://deal.inhire.app/vagas","score":23,"label":"🟡 WARM","vagas":20,"hasStale":false,"text":"## Deal — 🟡 WARM (Score: 23)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+7)\n","enriched":true,"hipotese":"Deal acelerou contratações em Tecnologia (85% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+7 vagas) detectado","Concentrado em Tecnologia (85%) — pressão forte numa única área","Aceleração recente: +2 vagas, ritmo crescendo na segunda quinzena"],"pitch_sdr":"\"Oi [nome], notei que a Deal está concentrando 85% das contratações em Tecnologia. Esse tipo de concentração em uma área específica é exatamente onde nosso RPO especializado entrega mais rápido. Posso te mostrar como funciona em 15 minutos?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","focused"],"topAreas":["Tecnologia (17)","Engenharia (3)"],"_source":"inhire"},{"empresa":"Elevor","url":"https://elevor.inhire.app/vagas","score":23,"label":"🟡 WARM","vagas":16,"hasStale":false,"text":"## Elevor — 🟡 WARM (Score: 23)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+2)\n","enriched":true,"hipotese":"Elevor acelerou contratações em Tecnologia (31% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+2 vagas) detectado","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], a Elevor está com 16 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"media","tags":["crescimento_rapido","general_expansion"],"topAreas":["Tecnologia (5)","Comercial (4)","Consultoria (2)"],"_source":"inhire"},{"empresa":"Involves","url":"https://involves.inhire.app/vagas","score":23,"label":"🟡 WARM","vagas":19,"hasStale":false,"text":"## Involves — 🟡 WARM (Score: 23)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+2)\n","enriched":true,"hipotese":"Involves acelerou contratações em Comercial (26% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+2 vagas) detectado","Contratação distribuída por muitas áreas — expansão generalizada","Aceleração recente: +2 vagas, ritmo crescendo na segunda quinzena"],"pitch_sdr":"\"Oi [nome], a Involves está com 19 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"media","tags":["crescimento_rapido","general_expansion"],"topAreas":["Comercial (5)","Tecnologia (4)","Customer Success (3)"],"_source":"inhire"},{"empresa":"Thomas Case","url":"https://thomascase.inhire.app/vagas","score":20,"label":"🟡 WARM","vagas":84,"hasStale":false,"text":"## Thomas Case — 🟡 WARM (Score: 20)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Operações (+3)\n\n**Variação:** Δ7d: +5 (total: 84)","enriched":true,"hipotese":"Thomas Case acelerou contratações em Comercial (26% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Operações (+3 vagas) detectado","+5 vagas em 7 dias","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Thomas Case — vocês abriram 5 novas vagas em 7 dias especialmente em Comercial. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"media","tags":["crescimento_rapido","general_expansion"],"topAreas":["Comercial (22)","Engenharia (12)","Financeiro (12)"],"_source":"inhire"}];</script>
+  <script>window._briefingsData = [{"empresa":"Raízen","url":"https://genteraizen.gupy.io/","score":89,"label":"🔥 HOT","vagas":384,"hasStale":false,"text":"## Raízen — 🔥 HOT (Score: 89)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Jurídico (+2)\n- 🚀 Boom 7d · Tecnologia (+3)\n- 🚀 Boom 7d · Operações (+16)\n- 🚀 Boom 7d · Jurídico (+2)\n\n**Variação:** Δ7d: +15 (total: 384)","enriched":true,"hipotese":"Raízen acelerou contratações em Operações (30% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Jurídico (+2 vagas) detectado","🚀 Boom 7d em Tecnologia (+3 vagas) detectado","🚀 Boom 7d em Operações (+16 vagas) detectado","+15 vagas em 7 dias","Mix equilibrado de seniorities"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Raízen — vocês abriram 15 novas vagas em 7 dias especialmente em Operações. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","balanced","product_growth","general_expansion","hot_priority"],"topAreas":["Operações (116)","Engenharia (87)","Serviços Gerais (48)"],"_source":"main"},{"empresa":"Motiva (Santander)","url":"https://motiva.gupy.io/","score":80,"label":"🔥 HOT","vagas":118,"hasStale":false,"text":"## Motiva (Santander) — 🔥 HOT (Score: 80)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Outros (+5)\n- 🚀 Boom 7d · Tecnologia (+2)\n- 🚀 Boom 7d · Financeiro (+3)\n- 🚀 Boom 7d · Outros (+5)\n\n**Variação:** Δ7d: +7 (total: 118)","enriched":true,"hipotese":"Motiva (Santander) acelerou contratações em Engenharia (31% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Outros (+5 vagas) detectado","🚀 Boom 7d em Tecnologia (+2 vagas) detectado","🚀 Boom 7d em Financeiro (+3 vagas) detectado","+7 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Motiva (Santander) — vocês abriram 7 novas vagas em 7 dias especialmente em Engenharia. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","base_scaling","support_scale","general_expansion","hot_priority"],"topAreas":["Engenharia (37)","Operações (25)","Serviços Gerais (16)"],"_source":"main"},{"empresa":"Randoncorp","url":"https://randoncorp.gupy.io/","score":78,"label":"🔥 HOT","vagas":188,"hasStale":false,"text":"## Randoncorp — 🔥 HOT (Score: 78)\n\n**Gatilhos:**\n- 🔺 Spike 24h · Operações\n- 🚀 Boom 7d · Operações (+22)\n- 🚀 Boom 7d · Consultoria (+4)\n- 🚀 Boom 7d · Tecnologia (+2)\n\n**Variação:** Δ7d: +32 (total: 188)","enriched":true,"hipotese":"Randoncorp acelerou contratações em Operações (34% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🔺 Spike 24h em Operações detectado","🚀 Boom 7d em Operações (+22 vagas) detectado","🚀 Boom 7d em Consultoria (+4 vagas) detectado","+32 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Randoncorp — vocês abriram 32 novas vagas em 7 dias especialmente em Operações. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","base_scaling","data_analytics","general_expansion","hot_priority"],"topAreas":["Operações (64)","Engenharia (49)","Outros (32)"],"_source":"main"},{"empresa":"Ambev","url":"https://ambev.gupy.io/","score":75,"label":"🔥 HOT","vagas":371,"hasStale":false,"text":"## Ambev — 🔥 HOT (Score: 75)\n\n**Gatilhos:**\n- 🔺 Spike 24h · RH & Pessoas\n- 🔺 Spike 24h · RH & Pessoas (+5)\n- 🚀 Boom 7d · Engenharia (+9)\n- 🚀 Boom 7d · Engenharia (+10)\n\n**Variação:** Δ7d: +31 (total: 371)","enriched":true,"hipotese":"Ambev acelerou contratações em Comercial (33% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🔺 Spike 24h em RH & Pessoas detectado","🔺 Spike 24h em RH & Pessoas (+5 vagas) detectado","🚀 Boom 7d em Engenharia (+9 vagas) detectado","+31 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Ambev — vocês abriram 31 novas vagas em 7 dias especialmente em Comercial. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","base_scaling","sales_scaling","general_expansion","hot_priority"],"topAreas":["Comercial (122)","Operações (75)","RH & Pessoas (49)"],"_source":"main"},{"empresa":"Energisa","url":"https://grupoenergisa.gupy.io/","score":75,"label":"🔥 HOT","vagas":153,"hasStale":false,"text":"## Energisa — 🔥 HOT (Score: 75)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Engenharia (+6)\n- 🚀 Boom 7d · Engenharia (+6)\n- 🚀 Boom 7d · Engenharia (+9)\n- 🚀 Boom 7d · Operações (+4)\n\n**Variação:** Δ7d: +7 (total: 153)","enriched":true,"hipotese":"Energisa acelerou contratações em Serviços Gerais (28% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Engenharia (+6 vagas) detectado","🚀 Boom 7d em Engenharia (+6 vagas) detectado","🚀 Boom 7d em Engenharia (+9 vagas) detectado","+7 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Energisa — vocês abriram 7 novas vagas em 7 dias especialmente em Serviços Gerais. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","building_leadership","product_growth","general_expansion","hot_priority"],"topAreas":["Serviços Gerais (43)","Comercial (32)","Engenharia (25)"],"_source":"main"},{"empresa":"V4 Company","url":"https://v4company.inhire.app/vagas","score":72,"label":"🔥 HOT","vagas":1003,"hasStale":false,"text":"## V4 Company — 🔥 HOT (Score: 72)\n\n**Gatilhos:**\n- 🔺 Spike 24h · RH & Pessoas\n- 🔺 Spike 24h · RH & Pessoas\n- 🚀 Boom 7d · Comercial (+17)\n- 🚀 Boom 7d · Marketing & Design (+19)\n\n**Variação:** Δ7d: +78 (total: 1003)","enriched":true,"hipotese":"V4 Company acelerou contratações em Comercial (43% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🔺 Spike 24h em RH & Pessoas detectado","🔺 Spike 24h em RH & Pessoas detectado","🚀 Boom 7d em Comercial (+17 vagas) detectado","+78 vagas em 7 dias","Maior foco em Comercial, possível nova vertical ou ramp-up"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da V4 Company — vocês abriram 78 novas vagas em 7 dias especialmente em Comercial. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","nova_vertical","hot_priority"],"topAreas":["Comercial (433)","Marketing & Design (265)","Gestão (221)"],"_source":"inhire"},{"empresa":"Vivo (Telefônica Brasil)","url":"https://vivo.gupy.io/","score":63,"label":"🔥 HOT","vagas":94,"hasStale":false,"text":"## Vivo (Telefônica Brasil) — 🔥 HOT (Score: 63)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+2)\n- 🚀 Boom 7d · Tecnologia (+2)\n- 🚀 Boom 7d · Tecnologia (+2)\n- 🚀 Boom 7d · Tecnologia (+3)\n\n**Variação:** Δ7d: +2 (total: 94)","enriched":true,"hipotese":"Vivo (Telefônica Brasil) acelerou contratações em Comercial (35% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+2 vagas) detectado","🚀 Boom 7d em Tecnologia (+2 vagas) detectado","🚀 Boom 7d em Tecnologia (+2 vagas) detectado","+2 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], a Vivo (Telefônica Brasil) está com 94 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"alta","tags":["crescimento_rapido","building_leadership","engineering","nova_vertical"],"topAreas":["Comercial (33)","Gestão (18)","Outros (16)"],"_source":"main"},{"empresa":"JBS","url":"https://grupojbs.gupy.io/","score":61,"label":"🟡 WARM","vagas":331,"hasStale":false,"text":"## JBS — 🟡 WARM (Score: 61)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+3)\n- 🚀 Boom 7d · Engenharia (+13)\n- 🚀 Boom 7d · Engenharia (+13)\n- 🚀 Boom 7d · Engenharia (+13)\n\n**Variação:** Δ7d: +27 (total: 331)","enriched":true,"hipotese":"JBS acelerou contratações em Comercial (29% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+3 vagas) detectado","🚀 Boom 7d em Engenharia (+13 vagas) detectado","🚀 Boom 7d em Engenharia (+13 vagas) detectado","+27 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da JBS — vocês abriram 27 novas vagas em 7 dias especialmente em Comercial. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","building_leadership","sales_scaling","general_expansion"],"topAreas":["Comercial (95)","Operações (83)","Engenharia (37)"],"_source":"main"},{"empresa":"Votorantim Cimentos","url":"https://votorantimcimentos.gupy.io/","score":59,"label":"🟡 WARM","vagas":162,"hasStale":false,"text":"## Votorantim Cimentos — 🟡 WARM (Score: 59)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Outros (+3)\n- 🚀 Boom 7d · Outros (+6)\n- 🚀 Boom 7d · Outros (+5)\n- 🚀 Boom 7d · Outros (+4)\n\n**Variação:** Δ7d: +9 (total: 162)","enriched":true,"hipotese":"Votorantim Cimentos acelerou contratações em Operações (44% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Outros (+3 vagas) detectado","🚀 Boom 7d em Outros (+6 vagas) detectado","🚀 Boom 7d em Outros (+5 vagas) detectado","+9 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Votorantim Cimentos — vocês abriram 9 novas vagas em 7 dias especialmente em Operações. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"alta","tags":["crescimento_rapido","building_leadership","product_growth","nova_vertical"],"topAreas":["Operações (72)","Serviços Gerais (30)","Engenharia (21)"],"_source":"main"},{"empresa":"Porto","url":"https://porto.gupy.io/","score":58,"label":"🟡 WARM","vagas":211,"hasStale":false,"text":"## Porto — 🟡 WARM (Score: 58)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Marketing & Design (+15)\n- 🚀 Boom 7d · Marketing & Design (+16)\n- 🚀 Boom 7d · Marketing & Design (+16)\n- 🚀 Boom 7d · Marketing & Design (+16)\n\n**Variação:** Δ7d: +20 (total: 211)","enriched":true,"hipotese":"Porto acelerou contratações em Tecnologia (27% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Marketing & Design (+15 vagas) detectado","🚀 Boom 7d em Marketing & Design (+16 vagas) detectado","🚀 Boom 7d em Marketing & Design (+16 vagas) detectado","+20 vagas em 7 dias","Maioria sênior — contratação especializada, ciclo de seleção longo"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Porto — vocês abriram 20 novas vagas em 7 dias especialmente em Tecnologia. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Precisamos de gente muito específica, RPO não vai achar.\" → Rebater: nosso banco de sêniores em Tecnologia é curado; mostramos perfis em até 5 dias úteis.","confianca":"alta","tags":["crescimento_rapido","senior_heavy","sales_scaling","general_expansion"],"topAreas":["Tecnologia (56)","Comercial (47)","Consultoria (25)"],"_source":"main"},{"empresa":"Suzano","url":"https://suzano.gupy.io/","score":57,"label":"🟡 WARM","vagas":48,"hasStale":false,"text":"## Suzano — 🟡 WARM (Score: 57)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Operações (+4)\n- 🚀 Boom 7d · Operações (+3)\n- 🚀 Boom 7d · Operações (+4)\n- 🚀 Boom 7d · Engenharia (+2)\n\n**Variação:** Δ7d: +8 (total: 48)","enriched":true,"hipotese":"Suzano cresce consistentemente (+18 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Operações (+4 vagas) detectado","🚀 Boom 7d em Operações (+3 vagas) detectado","🚀 Boom 7d em Operações (+4 vagas) detectado","+8 vagas em 7 dias","Mix equilibrado de seniorities"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Suzano — vocês abriram 8 novas vagas em 7 dias especialmente em Operações. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","crescimento_estrutural","balanced","operations_scale","general_expansion"],"topAreas":["Operações (14)","Engenharia (10)","Outros (5)"],"_source":"main"},{"empresa":"Assaí Atacadista","url":"https://assai.gupy.io/","score":51,"label":"🟡 WARM","vagas":2155,"hasStale":false,"text":"## Assaí Atacadista — 🟡 WARM (Score: 51)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Varejo (+21)\n- 🚀 Boom 7d · Outros (+22)\n- 🚀 Boom 7d · Varejo (+63)\n- 🚀 Boom 7d · Varejo (+58)\n\n**Variação:** Δ7d: +162 (total: 2155)","enriched":true,"hipotese":"Assaí Atacadista acelerou contratações em Varejo (69% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Varejo (+21 vagas) detectado","🚀 Boom 7d em Outros (+22 vagas) detectado","🚀 Boom 7d em Varejo (+63 vagas) detectado","+162 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Assaí Atacadista — vocês abriram 162 novas vagas em 7 dias especialmente em Varejo. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","base_scaling","product_growth","focused"],"topAreas":["Varejo (1481)","Outros (287)","Operações (113)"],"_source":"main"},{"empresa":"Banco Pan","url":"https://job-boards.greenhouse.io/bancopan","score":51,"label":"🟡 WARM","vagas":61,"hasStale":false,"text":"## Banco Pan — 🟡 WARM (Score: 51)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Financeiro (+3)\n- 🚀 Boom 7d · Financeiro (+3)\n- 🚀 Boom 7d · Financeiro (+3)\n- 🚀 Boom 7d · Financeiro (+3)\n\n**Variação:** Δ7d: +6 (total: 61)","enriched":true,"hipotese":"Banco Pan acelerou contratações em Tecnologia (31% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Financeiro (+3 vagas) detectado","🚀 Boom 7d em Financeiro (+3 vagas) detectado","🚀 Boom 7d em Financeiro (+3 vagas) detectado","+6 vagas em 7 dias","Maioria sênior — contratação especializada, ciclo de seleção longo"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Banco Pan — vocês abriram 6 novas vagas em 7 dias especialmente em Tecnologia. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Precisamos de gente muito específica, RPO não vai achar.\" → Rebater: nosso banco de sêniores em Tecnologia é curado; mostramos perfis em até 5 dias úteis.","confianca":"alta","tags":["crescimento_rapido","senior_heavy","engineering","general_expansion"],"topAreas":["Tecnologia (19)","Consultoria (8)","Marketing & Design (8)"],"_source":"main"},{"empresa":"Grupo Equatorial","url":"https://equatorialenergia.gupy.io/","score":48,"label":"🟡 WARM","vagas":67,"hasStale":false,"text":"## Grupo Equatorial — 🟡 WARM (Score: 48)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Comercial (+2)\n- 🚀 Boom 7d · Comercial (+2)\n- 🚀 Boom 7d · Operações (+2)\n- 🚀 Boom 7d · Comercial (+2)\n\n**Variação:** Δ7d: +3 (total: 67)","enriched":true,"hipotese":"Grupo Equatorial acelerou contratações em Engenharia (31% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Comercial (+2 vagas) detectado","🚀 Boom 7d em Comercial (+2 vagas) detectado","🚀 Boom 7d em Operações (+2 vagas) detectado","+3 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], a Grupo Equatorial está com 67 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","base_scaling","operations_scale","general_expansion"],"topAreas":["Engenharia (21)","Outros (10)","Comercial (9)"],"_source":"main"},{"empresa":"Petz","url":"https://petz.gupy.io/","score":47,"label":"🟡 WARM","vagas":317,"hasStale":false,"text":"## Petz — 🟡 WARM (Score: 47)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Marketing & Design (+3)\n- 🚀 Boom 7d · Marketing & Design (+4)\n- 🚀 Boom 7d · Marketing & Design (+4)\n- 🚀 Boom 7d · Marketing & Design (+4)\n\n**Variação:** Δ7d: +19 (total: 317)","enriched":true,"hipotese":"Petz acelerou contratações em Administrativo (28% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Marketing & Design (+3 vagas) detectado","🚀 Boom 7d em Marketing & Design (+4 vagas) detectado","🚀 Boom 7d em Marketing & Design (+4 vagas) detectado","+19 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Petz — vocês abriram 19 novas vagas em 7 dias especialmente em Administrativo. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","building_leadership","product_growth","general_expansion"],"topAreas":["Administrativo (89)","Varejo (74)","Outros (72)"],"_source":"main"},{"empresa":"Hospital Sírio-Libanês (IRSSL)","url":"https://irssl.gupy.io/","score":47,"label":"🟡 WARM","vagas":180,"hasStale":false,"text":"## Hospital Sírio-Libanês (IRSSL) — 🟡 WARM (Score: 47)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Saúde (+17)\n- 🚀 Boom 7d · RH & Pessoas (+3)\n- 🚀 Boom 7d · Saúde (+17)\n- 🚀 Boom 7d · RH & Pessoas (+3)\n\n**Variação:** Δ7d: +6 (total: 180)","enriched":true,"hipotese":"Hospital Sírio-Libanês (IRSSL) cresce consistentemente (+30 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Saúde (+17 vagas) detectado","🚀 Boom 7d em RH & Pessoas (+3 vagas) detectado","🚀 Boom 7d em Saúde (+17 vagas) detectado","+6 vagas em 7 dias","Muitos júniors — crescimento em volume, triagem em massa favorece RPO"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Hospital Sírio-Libanês (IRSSL) — vocês abriram 6 novas vagas em 7 dias especialmente em Saúde. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Já temos processo de triagem em massa.\" → Rebater: RPO complementa — a Intera assume o volume de junior/pleno e libera o TA interno para posições estratégicas.","confianca":"alta","tags":["crescimento_rapido","crescimento_estrutural","base_scaling","product_growth","focused"],"topAreas":["Saúde (112)","Outros (30)","Administrativo (11)"],"_source":"main"},{"empresa":"Azul","url":"https://voeazul.gupy.io/","score":45,"label":"🟡 WARM","vagas":84,"hasStale":false,"text":"## Azul — 🟡 WARM (Score: 45)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Consultoria (+6)\n- 🚀 Boom 7d · Consultoria (+7)\n- 🚀 Boom 7d · Gestão (+3)\n- 🚀 Boom 7d · Gestão (+3)\n","enriched":true,"hipotese":"Azul acelerou contratações em Consultoria (20% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Consultoria (+6 vagas) detectado","🚀 Boom 7d em Consultoria (+7 vagas) detectado","🚀 Boom 7d em Gestão (+3 vagas) detectado","Estruturando liderança — fase de profissionalização ou expansão de BU","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], a Azul está com 84 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","building_leadership","support_scale","general_expansion"],"topAreas":["Consultoria (17)","Outros (13)","Engenharia (13)"],"_source":"main"},{"empresa":"Volkswagen do Brasil","url":"https://vwbrasil.gupy.io/","score":43,"label":"🟡 WARM","vagas":25,"hasStale":false,"text":"## Volkswagen do Brasil — 🟡 WARM (Score: 43)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+3)\n- 🚀 Boom 7d · Outros (+2)\n- 🚀 Boom 7d · Tecnologia (+3)\n- 🚀 Boom 7d · Outros (+2)\n\n**Variação:** Δ7d: +5 (total: 25)","enriched":true,"hipotese":"Volkswagen do Brasil acelerou contratações em Tecnologia (32% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+3 vagas) detectado","🚀 Boom 7d em Outros (+2 vagas) detectado","🚀 Boom 7d em Tecnologia (+3 vagas) detectado","+5 vagas em 7 dias","Estruturando liderança — fase de profissionalização ou expansão de BU"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Volkswagen do Brasil — vocês abriram 5 novas vagas em 7 dias especialmente em Tecnologia. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","building_leadership","finance_control","general_expansion"],"topAreas":["Tecnologia (8)","Outros (6)","Financeiro (3)"],"_source":"main"},{"empresa":"Grupo Tigre","url":"https://tigre.gupy.io/","score":42,"label":"🟡 WARM","vagas":58,"hasStale":false,"text":"## Grupo Tigre — 🟡 WARM (Score: 42)\n\n**Gatilhos:**\n- 🔺 Spike 24h · Financeiro\n- 🔺 Spike 24h · Financeiro\n- 🚀 Boom 7d · Administrativo (+4)\n- 🚀 Boom 7d · RH & Pessoas (+8)\n","enriched":true,"hipotese":"Grupo Tigre acelerou contratações em Financeiro (26% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🔺 Spike 24h em Financeiro detectado","🔺 Spike 24h em Financeiro detectado","🚀 Boom 7d em Administrativo (+4 vagas) detectado","Mix equilibrado de seniorities","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], a Grupo Tigre está com 58 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"alta","tags":["crescimento_rapido","balanced","finance_control","general_expansion"],"topAreas":["Financeiro (15)","Consultoria (8)","Engenharia (6)"],"_source":"main"},{"empresa":"mileto.io","url":"https://mileto.inhire.app/vagas","score":42,"label":"🟡 WARM","vagas":29,"hasStale":false,"text":"## mileto.io — 🟡 WARM (Score: 42)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Comercial (+3)\n- 🚀 Boom 7d · Operações (+2)\n- 🚀 Boom 7d · RH & Pessoas (+4)\n\n**Variação:** Δ7d: +1 (total: 29)","enriched":true,"hipotese":"mileto.io cresce consistentemente (+14 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Comercial (+3 vagas) detectado","🚀 Boom 7d em Operações (+2 vagas) detectado","🚀 Boom 7d em RH & Pessoas (+4 vagas) detectado","+1 vagas em 7 dias","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], a mileto.io está com 29 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"media","tags":["crescimento_rapido","crescimento_estrutural","general_expansion"],"topAreas":["Comercial (8)","Operações (6)","RH & Pessoas (6)"],"_source":"inhire"},{"empresa":"Grupo Lider","url":"https://grupolider.inhire.app/vagas","score":38,"label":"🟡 WARM","vagas":185,"hasStale":false,"text":"## Grupo Lider — 🟡 WARM (Score: 38)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Marketing & Design (+2)\n- 🚀 Boom 7d · RH & Pessoas (+2)\n- 🚀 Boom 7d · RH & Pessoas (+3)\n- 🔺 Spike 24h · RH & Pessoas\n","enriched":true,"hipotese":"Grupo Lider acelerou contratações em Comercial (45% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Marketing & Design (+2 vagas) detectado","🚀 Boom 7d em RH & Pessoas (+2 vagas) detectado","🚀 Boom 7d em RH & Pessoas (+3 vagas) detectado","Maior foco em Comercial, possível nova vertical ou ramp-up","Aceleração recente: +29 vagas, ritmo crescendo na segunda quinzena"],"pitch_sdr":"\"Oi [nome], a Grupo Lider está com 185 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","nova_vertical"],"topAreas":["Comercial (84)","Serviços Gerais (26)","RH & Pessoas (18)"],"_source":"inhire"},{"empresa":"Zallpy","url":"https://zallpy.inhire.app/vagas","score":38,"label":"🟡 WARM","vagas":23,"hasStale":false,"text":"## Zallpy — 🟡 WARM (Score: 38)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+7)\n- 🚀 Boom 7d · Outros (+3)\n","enriched":true,"hipotese":"Zallpy cresce consistentemente (+5 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Tecnologia (+7 vagas) detectado","🚀 Boom 7d em Outros (+3 vagas) detectado","Concentrado em Tecnologia (70%) — pressão forte numa única área","Crescimento consistente de 28% nos últimos 30d — demanda crescente e sustentada"],"pitch_sdr":"\"Oi [nome], notei que a Zallpy está concentrando 70% das contratações em Tecnologia. Esse tipo de concentração em uma área específica é exatamente onde nosso RPO especializado entrega mais rápido. Posso te mostrar como funciona em 15 minutos?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","crescimento_estrutural","focused"],"topAreas":["Tecnologia (16)","Outros (3)","RH & Pessoas (3)"],"_source":"inhire"},{"empresa":"Grupo UNINTER","url":"https://uninter.inhire.app/vagas","score":33,"label":"🟡 WARM","vagas":32,"hasStale":false,"text":"## Grupo UNINTER — 🟡 WARM (Score: 33)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Comercial (+2)\n- 🚀 Boom 7d · Comercial (+2)\n- 🚀 Boom 7d · Saúde (+4)\n\n**Variação:** Δ7d: +3 (total: 32)","enriched":true,"hipotese":"Grupo UNINTER acelerou contratações em Educação (22% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Comercial (+2 vagas) detectado","🚀 Boom 7d em Comercial (+2 vagas) detectado","🚀 Boom 7d em Saúde (+4 vagas) detectado","+3 vagas em 7 dias","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], a Grupo UNINTER está com 32 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"media","tags":["crescimento_rapido","general_expansion"],"topAreas":["Educação (7)","Saúde (7)","Comercial (4)"],"_source":"inhire"},{"empresa":"Essencial Nutrição","url":"https://essencialnutricao.inhire.app/vagas","score":29,"label":"🟡 WARM","vagas":157,"hasStale":false,"text":"## Essencial Nutrição — 🟡 WARM (Score: 29)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Serviços Gerais (+24)\n- 🚀 Boom 7d · Serviços Gerais (+27)\n\n**Variação:** Δ7d: +14 (total: 157)","enriched":true,"hipotese":"Essencial Nutrição acelerou contratações em Serviços Gerais (84% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Serviços Gerais (+24 vagas) detectado","🚀 Boom 7d em Serviços Gerais (+27 vagas) detectado","+14 vagas em 7 dias","Concentrado em Serviços Gerais (84%) — pressão forte numa única área","Queda de 11% nos últimos 30d — monitorar antes de prospectar"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Essencial Nutrição — vocês abriram 14 novas vagas em 7 dias especialmente em Serviços Gerais. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","focused"],"topAreas":["Serviços Gerais (132)","Gestão (9)","Operações (8)"],"_source":"inhire"},{"empresa":"iMile Delivery","url":"https://imile.inhire.app/vagas","score":24,"label":"🟡 WARM","vagas":66,"hasStale":false,"text":"## iMile Delivery — 🟡 WARM (Score: 24)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Engenharia (+4)\n\n**Variação:** Δ7d: +1 (total: 66)","enriched":true,"hipotese":"iMile Delivery cresce consistentemente (+14 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Engenharia (+4 vagas) detectado","+1 vagas em 7 dias","Concentrado em Operações (62%) — pressão forte numa única área","Crescimento consistente de 27% nos últimos 30d — demanda crescente e sustentada"],"pitch_sdr":"\"Oi [nome], notei que a iMile Delivery está concentrando 62% das contratações em Operações. Esse tipo de concentração em uma área específica é exatamente onde nosso RPO especializado entrega mais rápido. Posso te mostrar como funciona em 15 minutos?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","crescimento_estrutural","focused"],"topAreas":["Operações (41)","Administrativo (8)","Engenharia (5)"],"_source":"inhire"},{"empresa":"Azos","url":"https://azos.inhire.app/vagas","score":24,"label":"🟡 WARM","vagas":17,"hasStale":false,"text":"## Azos — 🟡 WARM (Score: 24)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+3)\n\n**Variação:** Δ7d: +1 (total: 17)","enriched":true,"hipotese":"Azos cresce consistentemente (+7 vagas em 30d) — demanda que pressiona a equipe de TA interna.","sinais":["🚀 Boom 7d em Tecnologia (+3 vagas) detectado","+1 vagas em 7 dias","Maior foco em Tecnologia, possível nova vertical ou ramp-up","Crescimento consistente de 70% nos últimos 30d — demanda crescente e sustentada"],"pitch_sdr":"\"Oi [nome], a Azos está com 17 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","crescimento_estrutural","nova_vertical"],"topAreas":["Tecnologia (9)","Consultoria (2)","Comercial (2)"],"_source":"inhire"},{"empresa":"MazzaTech","url":"https://mazzatech.inhire.app/vagas","score":23,"label":"🟡 WARM","vagas":113,"hasStale":false,"text":"## MazzaTech — 🟡 WARM (Score: 23)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Engenharia (+5)\n","enriched":true,"hipotese":"MazzaTech acelerou contratações em Tecnologia (78% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Engenharia (+5 vagas) detectado","Concentrado em Tecnologia (78%) — pressão forte numa única área"],"pitch_sdr":"\"Oi [nome], notei que a MazzaTech está concentrando 78% das contratações em Tecnologia. Esse tipo de concentração em uma área específica é exatamente onde nosso RPO especializado entrega mais rápido. Posso te mostrar como funciona em 15 minutos?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","focused"],"topAreas":["Tecnologia (88)","Consultoria (8)","Engenharia (6)"],"_source":"inhire"},{"empresa":"Deal","url":"https://deal.inhire.app/vagas","score":23,"label":"🟡 WARM","vagas":20,"hasStale":false,"text":"## Deal — 🟡 WARM (Score: 23)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+7)\n","enriched":true,"hipotese":"Deal acelerou contratações em Tecnologia (85% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+7 vagas) detectado","Concentrado em Tecnologia (85%) — pressão forte numa única área","Aceleração recente: +2 vagas, ritmo crescendo na segunda quinzena"],"pitch_sdr":"\"Oi [nome], notei que a Deal está concentrando 85% das contratações em Tecnologia. Esse tipo de concentração em uma área específica é exatamente onde nosso RPO especializado entrega mais rápido. Posso te mostrar como funciona em 15 minutos?\"","objecao_potencial":"\"Temos TA interno.\" → Rebater: RPO não substitui — é capacidade adicional que você liga e desliga conforme o pipeline, sem custo fixo.","confianca":"media","tags":["crescimento_rapido","focused"],"topAreas":["Tecnologia (17)","Engenharia (3)"],"_source":"inhire"},{"empresa":"Elevor","url":"https://elevor.inhire.app/vagas","score":23,"label":"🟡 WARM","vagas":16,"hasStale":false,"text":"## Elevor — 🟡 WARM (Score: 23)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+2)\n","enriched":true,"hipotese":"Elevor acelerou contratações em Tecnologia (31% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+2 vagas) detectado","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], a Elevor está com 16 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"media","tags":["crescimento_rapido","general_expansion"],"topAreas":["Tecnologia (5)","Comercial (4)","Consultoria (2)"],"_source":"inhire"},{"empresa":"Involves","url":"https://involves.inhire.app/vagas","score":23,"label":"🟡 WARM","vagas":19,"hasStale":false,"text":"## Involves — 🟡 WARM (Score: 23)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Tecnologia (+2)\n","enriched":true,"hipotese":"Involves acelerou contratações em Comercial (26% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Tecnologia (+2 vagas) detectado","Contratação distribuída por muitas áreas — expansão generalizada","Aceleração recente: +2 vagas, ritmo crescendo na segunda quinzena"],"pitch_sdr":"\"Oi [nome], a Involves está com 19 vagas abertas — queria entender se vocês têm conseguido preencher no prazo ideal. Na Intera, trabalhamos com RPO que acelera o time-to-fill sem aumentar headcount fixo. Tem 15 minutos essa semana?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"media","tags":["crescimento_rapido","general_expansion"],"topAreas":["Comercial (5)","Tecnologia (4)","Customer Success (3)"],"_source":"inhire"},{"empresa":"Thomas Case","url":"https://thomascase.inhire.app/vagas","score":20,"label":"🟡 WARM","vagas":84,"hasStale":false,"text":"## Thomas Case — 🟡 WARM (Score: 20)\n\n**Gatilhos:**\n- 🚀 Boom 7d · Operações (+3)\n\n**Variação:** Δ7d: +5 (total: 84)","enriched":true,"hipotese":"Thomas Case acelerou contratações em Comercial (26% das vagas) — ritmo que equipe interna raramente sustenta sem apoio.","sinais":["🚀 Boom 7d em Operações (+3 vagas) detectado","+5 vagas em 7 dias","Contratação distribuída por muitas áreas — expansão generalizada"],"pitch_sdr":"\"Oi [nome], acompanho o crescimento da Thomas Case — vocês abriram 5 novas vagas em 7 dias especialmente em Comercial. Nesse ritmo, a equipe interna de TA tende a sobrecarregar rápido. A Intera pode atuar como extensão do time de recrutamento, sem custo fixo adicional. Vale uma conversa?\"","objecao_potencial":"\"Temos demandas em muitas frentes ao mesmo tempo.\" → Rebater: RPO é escalável por design — a Intera aloca recruiters especializados por área simultaneamente.","confianca":"media","tags":["crescimento_rapido","general_expansion"],"topAreas":["Comercial (22)","Engenharia (12)","Financeiro (12)"],"_source":"inhire"}];</script>
   <div class="briefings-summary" id="briefings-summary-bar">
     <div class="briefing-stat hot">🔥 HOT: 6</div>
     <div class="briefing-stat warm">🟡 WARM: 14</div>
@@ -5119,53 +5114,6 @@
   const SB_URL = 'https://wekqlxrjooldjbjhmyzn.supabase.co';
   const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indla3FseHJqb29sZGpiamhteXpuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc2NTg2ODcsImV4cCI6MjA5MzIzNDY4N30.zEaxNeZhDgu6qjnYIjJJIDYUEDyJAASipJKUFJPYsE4';
 
-  // ── Botão Atualizar Coleta (dispara GitHub Actions workflow) ──
-  const GH_WORKFLOW_URL = 'https://api.github.com/repos/antoniootcm-intera/intera-dashboard/actions/workflows/daily.yml/dispatches';
-  const GH_TOKEN_KEY    = 'intera_gh_token_v1';
-
-  async function triggerCollect() {
-    let token = localStorage.getItem(GH_TOKEN_KEY);
-    if (!token) {
-      token = prompt('Cole seu GitHub PAT (escopo public_repo).\nFica salvo só nesse navegador.');
-      if (!token) return;
-      localStorage.setItem(GH_TOKEN_KEY, token.trim());
-      token = token.trim();
-    }
-    const icon  = document.getElementById('btn-refresh-icon');
-    const label = document.getElementById('btn-refresh-label');
-    const hint  = document.getElementById('btn-refresh-hint');
-    icon.textContent  = '⏳';
-    label.textContent = 'Disparando…';
-    hint.textContent  = '';
-    try {
-      const res = await fetch(GH_WORKFLOW_URL, {
-        method: 'POST',
-        headers: {
-          'Authorization': 'Bearer ' + token,
-          'Accept':        'application/vnd.github+json',
-          'X-GitHub-Api-Version': '2022-11-28',
-        },
-        body: JSON.stringify({ ref: 'main' }),
-      });
-      if (res.status === 204) {
-        icon.textContent  = '✅';
-        label.textContent = 'Coleta disparada';
-        hint.innerHTML    = 'Rodando no GitHub Actions (~5 min).<br><a href="https://github.com/antoniootcm-intera/intera-dashboard/actions" target="_blank" style="color:#60a5fa">Ver progresso</a>';
-        setTimeout(() => { icon.textContent='🔄'; label.textContent='Atualizar coleta'; }, 8000);
-      } else if (res.status === 401 || res.status === 403) {
-        localStorage.removeItem(GH_TOKEN_KEY);
-        icon.textContent='❌'; label.textContent='Token inválido';
-        hint.textContent='Token revogado ou sem permissão. Clica de novo pra colar outro.';
-      } else {
-        const err = await res.text();
-        icon.textContent='❌'; label.textContent='Falhou ('+res.status+')';
-        hint.textContent=err.slice(0, 120);
-      }
-    } catch (e) {
-      icon.textContent='❌'; label.textContent='Erro de rede';
-      hint.textContent=e.message;
-    }
-  }
 
   // ── Sidebar nav ──
   const TABS = ['timeline','hoje','hoje-inhire','briefings','historico'];
