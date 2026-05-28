@@ -5275,7 +5275,7 @@
 
 
   // ── Sidebar nav ──
-  const TABS = ['timeline','hoje','hoje-inhire','briefings','historico'];
+  const TABS = ['timeline','hoje','hoje-inhire','briefings','ta-hiring','historico'];
   const AREA_COLORS_MAP = {"Tecnologia":"#3b82f6","Comercial":"#f59e0b","Varejo":"#fb7185","Operações":"#0ea5e9","Serviços Gerais":"#78716c","RH & Pessoas":"#8b5cf6","Marketing & Design":"#ec4899","Financeiro":"#10b981","Jurídico":"#f97316","Customer Success":"#06b6d4","Gestão":"#84cc16","Saúde":"#f43f5e","Educação":"#a855f7","Engenharia":"#64748b","Administrativo":"#d97706","Consultoria":"#14b8a6","Outros":"#9ca3af"};
   function showTab(tab, btn) {
     TABS.forEach(t => document.getElementById('tab-'+t)?.classList.toggle('hidden', tab !== t));
