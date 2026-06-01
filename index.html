@@ -173,45 +173,45 @@
   .crm-card-ta-badge { display: inline-block; font-size: 9px; padding: 1px 5px; background: rgba(239,68,68,.18); color: #f87171; border-radius: 4px; margin-left: 4px; font-weight: 700; }
   .crm-card-ta-age { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
   .crm-card-ind { font-size: 10px; padding: 1px 6px; background: rgba(34,197,94,.12); color: #4ade80; border-radius: 999px; margin-left: 4px; }
-  /* CRM card modal — wider, scroll, com seções */
-  .crm-modal { width: 560px; max-width: 92vw; max-height: 88vh; display: flex; flex-direction: column; padding: 0; }
-  .crm-modal-header { padding: 18px 22px; border-bottom: 1px solid var(--border); }
-  .crm-modal-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; }
+  /* CRM card modal — bem maior, escroll interno, seções respiráveis */
+  .bf-modal.crm-modal { width: 820px !important; max-width: 95vw; max-height: 90vh; display: flex; flex-direction: column; padding: 0; }
+  .crm-modal-header { padding: 24px 28px; border-bottom: 1px solid var(--border); }
+  .crm-modal-title { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 700; }
   .crm-modal-title-link { color: inherit; text-decoration: none; }
   .crm-modal-title-link:hover { color: var(--accent); }
-  .crm-modal-meta { display: flex; gap: 10px; font-size: 11px; color: var(--muted); margin-top: 6px; flex-wrap: wrap; }
-  .crm-modal-meta-pill { padding: 2px 8px; background: rgba(255,255,255,.04); border: 1px solid var(--border); border-radius: 999px; }
-  .crm-modal-body { padding: 18px 22px; overflow-y: auto; flex: 1; }
-  .crm-modal-section { margin-bottom: 18px; }
-  .crm-modal-section-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
-  .crm-status-pills { display: flex; gap: 6px; flex-wrap: wrap; }
-  .crm-status-pill { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,.03); cursor: pointer; font-size: 12px; font-weight: 600; transition: all .15s; }
+  .crm-modal-meta { display: flex; gap: 10px; font-size: 12px; color: var(--muted); margin-top: 10px; flex-wrap: wrap; }
+  .crm-modal-meta-pill { padding: 4px 12px; background: rgba(255,255,255,.04); border: 1px solid var(--border); border-radius: 999px; }
+  .crm-modal-body { padding: 22px 28px; overflow-y: auto; flex: 1; }
+  .crm-modal-section { margin-bottom: 22px; }
+  .crm-modal-section-title { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; }
+  .crm-status-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+  .crm-status-pill { padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,.03); cursor: pointer; font-size: 13px; font-weight: 600; transition: all .15s; }
   .crm-status-pill:hover { border-color: var(--accent); }
   .crm-status-pill.active { background: var(--accent); border-color: var(--accent); color: white; }
-  .crm-canal-pills { display: flex; gap: 6px; flex-wrap: wrap; }
-  .crm-canal-pill { padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,.03); cursor: pointer; font-size: 12px; transition: all .15s; }
+  .crm-canal-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+  .crm-canal-pill { padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255,255,255,.03); cursor: pointer; font-size: 13px; transition: all .15s; }
   .crm-canal-pill.active { background: rgba(99,102,241,.18); border-color: var(--accent); color: #c4cbff; }
-  .crm-notes-input { width: 100%; min-height: 90px; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); background: rgba(255,255,255,.03); color: var(--text); font-size: 13px; font-family: inherit; resize: vertical; box-sizing: border-box; }
+  .crm-notes-input { width: 100%; min-height: 120px; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); background: rgba(255,255,255,.03); color: var(--text); font-size: 14px; font-family: inherit; resize: vertical; box-sizing: border-box; line-height: 1.5; }
   .crm-notes-input:focus { outline: none; border-color: var(--accent); }
-  .crm-notes-saved { font-size: 10px; color: #4ade80; margin-top: 4px; opacity: 0; transition: opacity .2s; }
+  .crm-notes-saved { font-size: 11px; color: #4ade80; margin-top: 4px; opacity: 0; transition: opacity .2s; }
   .crm-notes-saved.show { opacity: 1; }
-  .crm-activity-add { display: flex; gap: 6px; margin-bottom: 10px; }
-  .crm-activity-add select { padding: 7px 10px; border-radius: 8px; border: 1px solid var(--border); background: rgba(255,255,255,.03); color: var(--text); font-size: 12px; }
-  .crm-activity-add input { flex: 1; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--border); background: rgba(255,255,255,.03); color: var(--text); font-size: 13px; }
+  .crm-activity-add { display: flex; gap: 8px; margin-bottom: 12px; }
+  .crm-activity-add select { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); background: rgba(255,255,255,.03); color: var(--text); font-size: 13px; min-width: 130px; }
+  .crm-activity-add input { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border); background: rgba(255,255,255,.03); color: var(--text); font-size: 14px; min-width: 0; }
   .crm-activity-add input:focus, .crm-activity-add select:focus { outline: none; border-color: var(--accent); }
-  .crm-activity-add button { padding: 7px 14px; border-radius: 8px; border: 1px solid var(--accent); background: var(--accent); color: white; cursor: pointer; font-size: 12px; font-weight: 600; }
-  .crm-activity-list { display: flex; flex-direction: column; gap: 6px; max-height: 220px; overflow-y: auto; }
-  .crm-activity { display: flex; gap: 8px; align-items: flex-start; padding: 8px 10px; background: rgba(255,255,255,.02); border: 1px solid var(--border); border-radius: 8px; font-size: 12px; }
-  .crm-activity-icon { font-size: 14px; line-height: 1; }
+  .crm-activity-add button { padding: 10px 20px; border-radius: 8px; border: 1px solid var(--accent); background: var(--accent); color: white; cursor: pointer; font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .crm-activity-list { display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; }
+  .crm-activity { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; background: rgba(255,255,255,.02); border: 1px solid var(--border); border-radius: 8px; font-size: 13px; }
+  .crm-activity-icon { font-size: 16px; line-height: 1; }
   .crm-activity-body { flex: 1; min-width: 0; }
-  .crm-activity-text { color: var(--text); line-height: 1.4; word-break: break-word; }
-  .crm-activity-when { font-size: 10px; color: var(--muted); margin-top: 2px; }
-  .crm-activity-del { background: transparent; border: none; color: var(--muted); cursor: pointer; font-size: 14px; padding: 0 4px; opacity: .5; }
+  .crm-activity-text { color: var(--text); line-height: 1.5; word-break: break-word; }
+  .crm-activity-when { font-size: 11px; color: var(--muted); margin-top: 4px; }
+  .crm-activity-del { background: transparent; border: none; color: var(--muted); cursor: pointer; font-size: 16px; padding: 0 6px; opacity: .5; }
   .crm-activity-del:hover { opacity: 1; color: #f87171; }
-  .crm-activity-empty { font-size: 11px; color: var(--muted); padding: 12px; text-align: center; border: 1px dashed var(--border); border-radius: 8px; }
-  .crm-modal-footer { padding: 12px 22px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
-  .crm-modal-close { padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text); cursor: pointer; font-size: 13px; }
-  .crm-modal-link-ext { font-size: 11px; color: var(--muted); text-decoration: none; }
+  .crm-activity-empty { font-size: 12px; color: var(--muted); padding: 16px; text-align: center; border: 1px dashed var(--border); border-radius: 8px; }
+  .crm-modal-footer { padding: 14px 28px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .crm-modal-close { padding: 9px 20px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text); cursor: pointer; font-size: 13px; }
+  .crm-modal-link-ext { font-size: 12px; color: var(--muted); text-decoration: none; }
   .crm-modal-link-ext:hover { color: var(--accent); }
 
   /* ── TA Hiring tab ── */
